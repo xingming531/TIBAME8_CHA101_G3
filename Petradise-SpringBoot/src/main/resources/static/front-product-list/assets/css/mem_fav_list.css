@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+div.wrap {
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  margin-top: 30px;
+  padding: 18px 15px;
+}
+
+td {
+  vertical-align: middle;
+}
+
+td.view_fav_work, td.delete_fav_work {
+  text-align: center;
+}
+
+button.view_fav_pro, button.delete_fav_pro {
+  border: rgba(0, 0, 0, 0);
+}
+
+td.pro_fav_img_area {
+  text-align: center;
+  vertical-align: middle;
+  width: 300px;
+  height: 300px;
+  justify-content: center;
+  margin: auto;
+}
+
+img.pro_fav_img {
+  max-width: 300px;
+  max-height: 300px;
+  
+}

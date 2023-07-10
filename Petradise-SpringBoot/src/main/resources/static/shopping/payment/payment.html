@@ -1,0 +1,322 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Payment</title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="assets/css/payment.css">
+    <link rel="shortcut icon" href="/assets/img/fav_icon.png" type="image/x-icon">
+</head>
+<body>
+<nav class="navbar navbar-light navbar-expand-md py-3" data-aos="zoom-in" data-aos-duration="1500">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="/index.html" style="position: sticky;top: 0;">
+            <img width="75" height="41" src="/assets/img/logo-only.png">
+        </a>
+
+        <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-3"
+                style="border-color: rgb(241,236,209);">
+            <span class="visually-hidden">Toggle navigation</span>
+            <span class="navbar-toggler-icon"
+                  style="--bs-primary: #fd780f;--bs-primary-rgb: 253,120,15;--bs-secondary: #e69609;--bs-secondary-rgb: 230,150,9;color: rgb(241,236,209);">
+        </span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navcol-3" style="background: #ffffff;">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item dropdown" style="width: 100px;margin: 0px 0px 0px 10px">
+                    <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown"
+                       data-bs-auto-close="outside" href="/index.html" style="margin: 10px 0px 0px;">關於我們</a>
+                    <div class="dropdown-menu" style="min-width: 110px;margin: 1px 0px 0px;border: 0px none rgba(33,37,41,0);">
+                        <div class="dropdown-divider"
+                             style="color: rgba(33,37,41,0);margin: 4px 0px;border-color: rgb(241,236,209);">
+                        </div>
+                        <a class="dropdown-item" href="/index.html#news-contain" style="font-size: 14px;">最新消息</a>
+                        <a class="dropdown-item" href="/index.html#aboutMe-contain" style="font-size: 14px;">關於我們</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown" style="width: 100px;margin: 0px 0px 0px 10px">
+                    <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown"
+                       data-bs-auto-close="outside" href="#" style="margin: 10px 0px 0px;">毛孩旅館</a>
+                    <div class="dropdown-menu" style="min-width: 110px;margin: 1px 0px 0px;border: 0px none rgba(33,37,41,0);">
+
+                        <div class="dropdown-divider" style="color: rgba(33,37,41,0);margin: 4px 0px;border-color: rgb(241,236,209);">
+                        </div>
+                        <a class="dropdown-item" href="/hotel/searchHotel.html" style="font-size: 14px">預約訂房</a>
+                        <a class="dropdown-item join-hotelowner" href="/owner/SignUp.html" style="font-size: 14px;color: #fd780f;">加入我們</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown" style="width: 100px;margin: 0px 0px 0px 10px">
+                    <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown"
+                       data-bs-auto-close="outside" href="#" style="margin: 10px 0px 0px;">浪浪收容</a>
+                    <div class="dropdown-menu" style="min-width: 110px;margin: 1px 0px 0px;border: 0px none rgba(33,37,41,0);">
+                        <div class="dropdown-divider"
+                             style="color: rgba(33,37,41,0);margin: 4px 0px;border-color: rgb(241,236,209);">
+                        </div>
+                        <a class="dropdown-item" href="/animal_39/Frontanimal/animalbrowse.html" style="font-size: 14px">浪浪認養</a>
+                        <a class="dropdown-item lostPet" href="/lostPet/lost.html" style="font-size: 14px">遺失協尋</a>
+                        <a class="dropdown-item" href="/animalCorporation/signup.html" style="font-size: 14px">加入我們</a>
+                    </div>
+                </li>
+
+                <li class="nav-item" style="height: 50px;width: 100px;margin: 0px 0px 0px 10px">
+                    <a class="nav-link" href="/front-product-list/front-product-list.html" style="width: 100px;margin: 10px 0px 0px;">寵物商城</a>
+                </li>
+
+                <!--          <li class="nav-item dropdown" style="width: 100px;margin: 0px 0px 0px 10px">-->
+                <!--            <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown"-->
+                <!--              data-bs-auto-close="outside" href="#" style="margin: 10px 0px 0px;" target="_parent">客服中心</a>-->
+                <!--            <div class="dropdown-menu" style="min-width: 110px;margin: 1px 0px 0px;border: 0px none rgba(33,37,41,0);">-->
+                <!--              <div class="dropdown-divider" style="color: rgba(33,37,41,0);margin: 4px 0px;border-color: rgb(241,236,209);">-->
+                <!--              </div>-->
+                <!--              <a class="dropdown-item" href="#" style="font-size: 14px">常見問題</a>-->
+                <!--              <a class="dropdown-item" href="#" style="font-size: 14px">服務認證</a>-->
+                <!--              <a class="dropdown-item" href="#" style="font-size: 14px">聯絡我們</a>-->
+                <!--            </div>-->
+                <!--          </li>-->
+
+            </ul>
+
+            <!-- Shopping Cart -->
+            <div class="btn btn-primary cart" style="cursor: pointer;margin-top: 10px;margin-right: 10px;border-style: none;background: rgb(255,255,255);color: #fd780f;height: 38px;width: 100px;">
+            <span class="fas fa-shopping-cart"
+                  style="margin: 9px 5px 0px -12px;padding: 0px;font-size: 24px;color: #fd780f;height: 26px;width: 26px;margin-top: 0px;margin-right: 3px;margin-bottom: 3px;margin-left: 3px;">
+            </span>
+                <span class="shopping-cart-total"></span>
+            </div>
+
+            <!-- Member -->
+            <div class="btn-group" style="margin: 10px 0px 0px;">
+                <a class="btn btn-primary" type="button" style="height: 38px;width: 90px;background: #fd780f;border-color: rgb(255, 255, 255);padding-top: 6px">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16"
+                         class="bi bi-person-circle" style="margin: 0px 3px 3px;padding: 0px;font-size: 26px;">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
+                        <path fill-rule="evenodd"
+                              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z">
+                        </path>
+                    </svg>會員
+                </a>
+                <button class="btn btn-primary dropdown-toggle dropdown-toggle-split"
+                        data-bs-toggle="dropdown" aria-expanded="false" type="button"
+                        style="background: #fd780f;border-color: rgb(255, 255, 255);width: 29.5833px;"></button>
+                <div class="dropdown-menu" style="min-width: 118px;background: #fd780f;margin: 1px 0px 0px;">
+                    <a class="dropdown-item navigate-signin" href="#" style="color: #ffffff;">登入/註冊</a>
+                    <a class="dropdown-item navigate-member-center" href="#" style="color: #ffffff;">會員中心</a>
+                    <a class="dropdown-item logout" style="color: #ffffff;">登出</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</nav>
+
+
+<main class="payment-body">
+        <section class="payment-form">
+            <div class="header">
+                <h3 class="heading">付款方式</h3>
+            </div>
+
+
+            <form>
+                <div class="checkout-items">
+                    <h3 class="title">訂購明細</h3>
+                    <hr class="diver">
+
+
+                    <div id="payBody">
+<!--                        <div class="payment-items">-->
+<!--                            <div class="image-box">-->
+<!--                                <img src="assets/img/Great%20Ball.png" style="height: 80px">-->
+<!--                            </div>-->
+
+<!--                            <div class="item-about">-->
+<!--                                <h3 class="item-type">Pokemon</h3>-->
+<!--                                <h1 class="item-title">AAAAA</h1>-->
+<!--                            </div>-->
+
+<!--                            <div class="item-price">$500</div>-->
+<!--                        </div>-->
+
+<!--                        <div class="payment-items">-->
+<!--                            <div class="image-box">-->
+<!--                                <img src="assets/img/Great%20Ball.png" style="height: 80px">-->
+<!--                            </div>-->
+
+<!--                            <div class="item-about">-->
+<!--                                <h3 class="item-type">Pokemon</h3>-->
+<!--                                <h1 class="item-title">BBBBB</h1>-->
+<!--                            </div>-->
+
+<!--                            <div class="item-price">$500</div>-->
+<!--                        </div>-->
+                    </div>
+
+                    <hr class="diver">
+
+                    <div class="tol">
+                        <div style="color: #f8c544">訂購金額
+                            <span class="items-price">+ $ 0</span>
+                        </div>
+
+                        <div style="color: #f8c544">運費
+                            <span class="ship-price">+ $ 0</span>
+                        </div>
+
+                        <div>付款總金額
+                            <span class="tol-price">= $ 0</span>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="payment">
+                    <h3 class="title">付款方式</h3>
+                    <hr class="diver">
+
+                    <div class="method-group">
+                        <label for="sel1">付款方式：</label>
+                        <select id="sel1" class="form-control">
+                            <option disabled selected>-----請選擇-----</option>
+                            <option value="credit-card">信用卡</option>
+                            <option value="wire-transfers">轉帳/匯款</option>
+                            <option>貨到付款</option>
+                        </select>
+                    </div>
+
+                    <div class="credit-card -off">
+                        <div class="form-group">
+                            <label for="card-number">信用卡卡號：</label>
+                            <input id="card-number" type="text" class="form-control" placeholder="ex. 000011112222">
+                        </div>
+                        <div class="form-group">
+                            <label>失效日期：</label>
+                            <div class="input-group expiration-date">
+                                <input type="text" class="form-control" placeholder="MM">
+                                <span class="date-separator"> ／ </span>
+                                <input type="text" class="form-control" placeholder="YY">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="cvc">安全碼：</label>
+                            <input id="cvc" type="text" class="form-control" placeholder="ex. 012">
+                        </div>
+                        <div class="form-group">
+                            <label for="card-holder">持有人姓名：</label>
+                            <input id="card-holder" type="text" class="form-control" placeholder="ex. 吳大衛">
+                        </div>
+                    </div>
+
+                    <div class="wire-transfers -off">
+                        <div class="form-group">
+                            <label>TIBAME Bank (001)</label>
+                            <br>
+                            <label>戶名：Petradise 有限公司</label>
+                            <br>
+                            <label>帳號：1234-5678-9000</label>
+                        </div>
+                        <div class="form-group">
+                            <label for="remitter-name">匯款人姓名：</label>
+                            <input id="remitter-name" type="text" class="form-control" placeholder="ex. 吳大衛">
+                        </div>
+                        <div class="form-group">
+                            <label for="last-number">匯款帳號後5碼：</label>
+                            <input id="last-number" type="text" class="form-control" placeholder="ex. 01234">
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="shipping">
+                    <h3 class="title">取貨方式</h3>
+                    <hr class="diver">
+
+                    <div class="method-group">
+                        <label for="sel2">取貨方式：</label>
+                        <select id="sel2" class="form-control">
+                            <option disabled="" selected="">-----請選擇-----</option>
+                            <option value="home-delivery">宅配到府</option>
+                            <option value="pickup-711">711超商 取貨</option>
+                            <option value="pickup-fami">全家超商 取貨</option>
+                        </select>
+                    </div>
+
+                    <div class="home-delivery -off">
+                        <div class="form-group">
+                            <label>收件人姓名：</label>
+                            <input type="text" class="form-control recipient-name" placeholder="ex. 吳大衛">
+                        </div>
+                        <div class="form-group">
+                            <label>收件人連絡電話：</label>
+                            <input type="tel" class="form-control recipient-phone" placeholder="ex. 0987654321">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-address">收件人地址：</label>
+                            <input id="recipient-address" type="text" class="form-control" placeholder="ex. 330桃園市中壢區">
+                        </div>
+                    </div>
+
+                    <div class="pickup-711 -off">
+                        <div class="form-group">
+                            <label for="store-name-711">711取貨門市名：</label>
+                            <input id="store-name-711" type="text" class="form-control" placeholder="EX. 中壢店">
+                        </div>
+                        <div class="form-group">
+                            <label>收件人姓名：</label>
+                            <input type="text" class="form-control recipient-name-711" placeholder="EX. David Wu">
+                        </div>
+                        <div class="form-group">
+                            <label>收件人連絡電話：</label>
+                            <input type="tel" class="form-control recipient-phone-711" placeholder="EX. 0987654321">
+                        </div>
+                    </div>
+
+                    <div class="pickup-fami -off">
+                        <div class="form-group">
+                            <label for="store-name-fami">全家取貨門市名：</label>
+                            <input id="store-name-fami" type="text" class="form-control" placeholder="EX. 中壢店">
+                        </div>
+                        <div class="form-group">
+                            <label>收件人姓名：</label>
+                            <input type="text" class="form-control recipient-name-fami" placeholder="EX. David Wu">
+                        </div>
+                        <div class="form-group">
+                            <label>收件人連絡電話：</label>
+                            <input type="tel" class="form-control recipient-phone-fami" placeholder="EX. 0987654321">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="button" class="confirm-payment">確認付款</button>
+                    </div>
+                </div>
+            </form>
+
+        </section>
+    </main>
+
+        <script src="/vendors/jquery/jquery-3.6.4.min.js"></script>
+        <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="assets/js/script.min.js"></script>
+        <script src="assets/js/payment.js"></script>
+
+        <!-- login -->
+        <script src="/assets/js/script.min.js"></script>
+        <script src="/assets/js/login.js"></script>
+        <script src="/index/js/index.js"></script>
+        <!-- cart -->
+        <script src="/shopping/pd_page/assets/js/cartIcon.js"></script>
+
+    </body>
+</html>

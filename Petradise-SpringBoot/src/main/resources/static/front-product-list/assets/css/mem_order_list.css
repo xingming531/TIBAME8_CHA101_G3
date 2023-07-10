@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+div.wrap {
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  margin-top: 30px;
+  padding: 18px 15px;
+}
+
+td {
+  vertical-align: middle;
+}
+
+td.view_order_work, td.delete_order_work {
+  text-align: center;
+}
+
+button.view_order, button.delete_order {
+  border: rgba(0, 0, 0, 0);
+}
+
+td.pro_fav_img_area {
+  text-align: center;
+  vertical-align: middle;
+  width: 300px;
+  height: 300px;
+  justify-content: center;
+  margin: auto;
+}
+
+img.pro_fav_img {
+  max-width: 300px;
+  max-height: 300px;
+}
+
+table#modal_table * {
+  text-align: left;
+}

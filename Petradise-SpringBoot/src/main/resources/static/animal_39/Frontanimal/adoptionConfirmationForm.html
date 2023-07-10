@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>DataTables Example</title>
+  <title>員工後台</title>
+  <!-- JQuery連結-->
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+
+  <!-- Datatable連結-->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
+  <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+
+  <!-- RWD JS連結 -->
+  <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/responsive/2.4.1/js/dataTables.responsive.min.js"></script>
+
+  <!-- RWD CSS連結 -->
+  <link rel="stylesheet" href=" https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.4.1/css/responsive.dataTables.min.css">
+
+
+  <!-- bootstrap5 CSS -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+
+  <!-- sweet alert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- Add nav bar css -->
+  <link rel="stylesheet" href="/member/css/nav.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="shortcut icon" href="/assets/img/fav_icon.png" type="image/x-icon">
+</head>
+
+<body>
+  <div class="content">
+    <div class="container mt-5">
+      <section class="py-5" style="flex: 1;">
+        <div class="container">
+          <h3 class="text-white mb-4"></h3>
+          <div class="card shadow">
+            <div class="card-header py-3">
+              <div> 認養管理
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="table-responsive table mt-2" id="dataTable" role="grid"></div>
+              <table class="table table-striped table-hover" style=" width:100%">
+                <thead>
+                  <tr>
+                    <!-- 欄位標題 -->
+                    <!-- <th class="align-middle">會員</th> -->
+                    <th class="align-middle animalName">動物名字</th>
+                    <th class="align-middle animalType">動物種類</th>
+                    <th class="align-middle animalSex">動物性別</th>
+                    <th class="align-middle animalAge">動物年齡</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- 動態生成表格內容 -->
+                  <!-- 					<tr> -->
+                  <!-- <td class="align-middle">會員</td> -->
+                  <!-- 						<td class="align-middle">動物名字</td> -->
+                  <!-- 						<td class="align-middle">動物種類</td> -->
+                  <!-- 						<td class="align-middle">動物性別</td> -->
+                  <!-- 						<td class="align-middle">動物年齡</td> -->
+                  <!-- 					</tr> -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ"
+    crossorigin="anonymous"></script>
+    <script src="../../assets/js/login.js"></script>
+    <script src="../../index/js/index.js"></script>
+
+  <!-- JS -->
+
+
+  <script>
+    $(document).ready(function () {
+    });
+
+    let memberId = localStorage.getItem("memberId");
+
+    $.ajax({
+      url: `/animals/memId=${memberId}`,
+      method: "GET",
+      dataType: "json",
+      success: function (animalData) {
+        // 拿到动物数据
+        console.log(animalData);
+
+        // 拿取url中的变量
+        //             let urlParam = new URLSearchParams(window.location.search);
+        //             let queryValue = urlParam.get('animalId');
+
+        // 循环遍历动物数据
+        for (let i = 0; i < animalData.length; i++) {
+          let animal = animalData[i];
+          let newRow = $('<tr>');
+          newRow.append($('<td>').addClass('animalName').text(animal.animalName));
+          newRow.append($('<td>').addClass('animalType').text(animal.animalType));
+          newRow.append($('<td>').addClass('animalSex').text(animal.animalSex));
+          newRow.append($('<td>').addClass('animalAge').text(animal.animalAge));
+          $('tbody').append(newRow);
+
+
+
+          // let html = `
+          // 	<td class="align-middle" id="animalName${i}">${animal.animalName}</td>
+          // 	<td class="align-middle" id="animalName${i}">${animal.animalType}</td>
+          // 	<td class="align-middle" id="animalName${i}">${animal.animalSex}</td>
+          // 	<td class="align-middle" id="animalName${i}">${animal.animalAge}</td>`;
+          // document.querySelector('.card-body tbody .odd').innerHTML = html;
+          // 如果动物ID匹配url中的animalId
+          //               if (animal.id === queryValue) {
+          //                 // 将取得的数据填充到修改表单中
+          // //                 $("#animalId").val(queryValue);
+          // //                 $("#membId").val(memberId);
+          //                 $("#animalName").val(animal.name);
+          //                 $("#animalType").val(animal.address);
+          //                 $("#animalSex").val(animal.phone);
+          //                 $("#animalAge").val(animal.email);
+          //                 break; // 找到匹配的动物后退出循环
+          //               }
+        }
+      },
+      error: function (error) {
+        console.error("AJAX Error: " + error);
+      }
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+
+  <script src="/member/js/nav.js"></script>
+</body>
+
+</html>

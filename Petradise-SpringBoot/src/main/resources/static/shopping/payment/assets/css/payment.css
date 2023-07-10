@@ -1,0 +1,155 @@
+.payment-body {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.payment-form {
+    width: 70%;
+    height: auto;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 40px #f9ecdb
+}
+
+.payment-body .header {
+    margin: 20px auto;
+    width: 90%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.payment-body .heading {
+    font-size: 20px;
+    font-weight: 700;
+    color: #574f36
+}
+
+.payment-body .title {
+    margin: 50px 50px .8em;
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 8px;
+    color: #574f36
+}
+
+.payment-body .diver {
+    margin-top: -10px;
+    width: 88%;
+    margin-left: 5%
+}
+
+.payment-items {
+    margin: auto auto 12px;
+    padding: 0px 0px 8px;
+    width: 70%;
+    height: 20%;
+    display: flex;
+    align-items: center
+}
+
+.payment-body .image-box {
+    /*border: 1px solid red;*/
+    width: 100px;
+    text-align: center;
+    margin: 0px 20px
+}
+
+.payment-body .item-about {
+    /*border: 1px solid blueviolet;*/
+    width: 200px;
+    margin: 0px 70px
+}
+
+.payment-body .item-type {
+    line-height: 10px;
+    font-size: 10px;
+    font-weight: 600;
+    color: #574f36
+}
+
+.payment-body .item-title {
+    line-height: 10px;
+    font-size: 18px;
+    color: #a67c52
+}
+
+.payment-body .item-price {
+    /*height: 100%;*/
+    /*border: 1px solid green;*/
+    font-size: 18px;
+    color: #f8c544;
+    text-align: right;
+    width: 100px;
+    margin: 0px 10px 0px 60px
+}
+
+.payment-body .tol {
+    width: calc(100% - 130px);
+    font-size: 18px;
+    color: #fd780f;
+    font-weight: 600;
+    text-align: right
+}
+
+.payment-body .items-price {
+    margin-left: 200px;
+    color: #f8c544
+}
+
+.payment-body .ship-price {
+    margin-left: 222px;
+    color: #f8c544
+}
+
+.payment-body .tol-price {
+    margin-left: 200px
+}
+
+.payment-body .checkout-items,
+.payment-body .payment,
+.payment-body .shipping {
+    margin-bottom: 10%
+}
+
+.payment-body .form-group,
+.payment-body .method-group {
+    margin: 0 120px 10px;
+    width: fit-content;
+    color: #574f36
+}
+
+#card-holder,
+#card-number,
+#remitter-name {
+    width: 208%
+}
+
+#recipient-address {
+    width: 300%
+}
+
+.payment-body ::placeholder {
+    color: #d5c589
+}
+
+.payment-body .-off {
+    display: none
+}
+
+.payment-body .confirm-payment {
+    height: 40px;
+    width: 500%;
+    margin-left: 150%;
+    margin-top: 50%;
+    border: none;
+    background: #f8c544;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff
+}

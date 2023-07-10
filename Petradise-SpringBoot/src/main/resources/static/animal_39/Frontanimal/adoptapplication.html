@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html class="text-center" lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<title>認養申請表</title>
+<link rel="stylesheet"
+	href="/assets/bootstrap/css/bootstrap.min.css?h=f1a8fe9e98944b9d682ec5c3efac8f17">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+<link rel="stylesheet"
+	href="/assets/css/styles.min.css?h=a9799302f9cfd639f515d7bd2dc3681b">
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+	rel="stylesheet">
+<link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+<link rel="shortcut icon" href="/assets/img/fav_icon.png" type="image/x-icon">
+<style>
+.centered-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: 200vh; /* 可根据需要进行调整 */
+}
+
+#animalList img {
+	width: 100%;
+	
+}
+
+
+
+.col-md-4 {
+    flex: 0 0 auto;
+    width: 100%;
+    }
+</style>
+</head>
+
+<body class="justify-content-center"
+	style="border-color: var(- -bs-table-border-color);">
+	<!-- Start: Navbar Centered Links -->
+	<nav class="navbar navbar-light navbar-expand-md py-3" data-aos="zoom-in" data-aos-duration="1500">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="/index.html" style="position: sticky;top: 0;">
+        <img width="75" height="41" src="/assets/img/logo-only.png">
+      </a>
+
+      <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-3"
+        style="border-color: rgb(241,236,209);">
+        <span class="visually-hidden">Toggle navigation</span>
+        <span class="navbar-toggler-icon"
+          style="--bs-primary: #fd780f;--bs-primary-rgb: 253,120,15;--bs-secondary: #e69609;--bs-secondary-rgb: 230,150,9;color: rgb(241,236,209);">
+        </span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navcol-3" style="background: #ffffff;">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item dropdown" style="width: 100px;margin: 0px 0px 0px 10px">
+            <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown"
+              data-bs-auto-close="outside" href="/index.html" style="margin: 10px 0px 0px;">關於我們</a>
+            <div class="dropdown-menu" style="min-width: 110px;margin: 1px 0px 0px;border: 0px none rgba(33,37,41,0);">
+              <div class="dropdown-divider"
+                style="color: rgba(33,37,41,0);margin: 4px 0px;border-color: rgb(241,236,209);">
+              </div>
+              <a class="dropdown-item" href="/index.html#news-contain" style="font-size: 14px;">最新消息</a>
+              <a class="dropdown-item" href="/index.html#aboutMe-contain" style="font-size: 14px;">關於我們</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown" style="width: 100px;margin: 0px 0px 0px 10px">
+            <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown"
+              data-bs-auto-close="outside" href="#" style="margin: 10px 0px 0px;">毛孩旅館</a>
+            <div class="dropdown-menu" style="min-width: 110px;margin: 1px 0px 0px;border: 0px none rgba(33,37,41,0);">
+
+              <div class="dropdown-divider" style="color: rgba(33,37,41,0);margin: 4px 0px;border-color: rgb(241,236,209);">
+              </div>
+              <a class="dropdown-item" href="/hotel/searchHotel.html" style="font-size: 14px">預約訂房</a>
+                <a class="dropdown-item join-hotelowner" href="/owner/SignUp.html" style="font-size: 14px;color: #fd780f;">加入我們</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown" style="width: 100px;margin: 0px 0px 0px 10px">
+            <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown"
+              data-bs-auto-close="outside" href="#" style="margin: 10px 0px 0px;">浪浪收容</a>
+            <div class="dropdown-menu" style="min-width: 110px;margin: 1px 0px 0px;border: 0px none rgba(33,37,41,0);">
+              <div class="dropdown-divider"
+                style="color: rgba(33,37,41,0);margin: 4px 0px;border-color: rgb(241,236,209);">
+              </div>
+              <a class="dropdown-item" href="/animal_39/Frontanimal/animalbrowse.html" style="font-size: 14px">浪浪認養</a>
+              <a class="dropdown-item lostPet" href="/lostPet/lost.html" style="font-size: 14px">遺失協尋</a>
+              <a class="dropdown-item" href="/animalCorporation/signup.html" style="font-size: 14px">加入我們</a>
+            </div>
+          </li>
+
+          <li class="nav-item" style="height: 50px;width: 100px;margin: 0px 0px 0px 10px">
+            <a class="nav-link" href="/front-product-list/front-product-list.html" style="width: 100px;margin: 10px 0px 0px;">寵物商城</a>
+          </li>
+
+<!--          <li class="nav-item dropdown" style="width: 100px;margin: 0px 0px 0px 10px">-->
+<!--            <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown"-->
+<!--              data-bs-auto-close="outside" href="#" style="margin: 10px 0px 0px;" target="_parent">客服中心</a>-->
+<!--            <div class="dropdown-menu" style="min-width: 110px;margin: 1px 0px 0px;border: 0px none rgba(33,37,41,0);">-->
+<!--              <div class="dropdown-divider" style="color: rgba(33,37,41,0);margin: 4px 0px;border-color: rgb(241,236,209);">-->
+<!--              </div>-->
+<!--              <a class="dropdown-item" href="#" style="font-size: 14px">常見問題</a>-->
+<!--              <a class="dropdown-item" href="#" style="font-size: 14px">服務認證</a>-->
+<!--              <a class="dropdown-item" href="#" style="font-size: 14px">聯絡我們</a>-->
+<!--            </div>-->
+<!--          </li>-->
+
+        </ul>
+
+        <!-- Shopping Cart -->
+        <div class="btn btn-primary cart" style="cursor: pointer;margin-top: 10px;margin-right: 10px;border-style: none;background: rgb(255,255,255);color: #fd780f;height: 38px;width: 100px;">
+            <span class="fas fa-shopping-cart"
+                  style="margin: 9px 5px 0px -12px;padding: 0px;font-size: 24px;color: #fd780f;height: 26px;width: 26px;margin-top: 0px;margin-right: 3px;margin-bottom: 3px;margin-left: 3px;">
+            </span>
+          <span class="shopping-cart-total"></span>
+        </div>
+
+        <!-- Member -->
+        <div class="btn-group" style="margin: 10px 0px 0px;">
+            <a class="btn btn-primary" type="button" style="height: 38px;width: 90px;background: #fd780f;border-color: rgb(255, 255, 255);padding-top: 6px">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16"
+                  class="bi bi-person-circle" style="margin: 0px 3px 3px;padding: 0px;font-size: 26px;">
+                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
+                  <path fill-rule="evenodd"
+                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z">
+                  </path>
+                </svg>會員
+            </a>
+            <button class="btn btn-primary dropdown-toggle dropdown-toggle-split"
+            data-bs-toggle="dropdown" aria-expanded="false" type="button"
+            style="background: #fd780f;border-color: rgb(255, 255, 255);width: 29.5833px;"></button>
+            <div class="dropdown-menu" style="min-width: 118px;background: #fd780f;margin: 1px 0px 0px;">
+               <a class="dropdown-item navigate-signin" href="#" style="color: #ffffff;">登入/註冊</a>
+               <a class="dropdown-item navigate-member-center" href="#" style="color: #ffffff;">會員中心</a>
+               <a class="dropdown-item logout" style="color: #ffffff;">登出</a>
+            </div>
+        </div>
+
+      </div>
+
+    </div>
+</nav>
+	<!-- End: Navbar Centered Links -->
+	<!-- Start: Hero Carousel -->
+	
+	<div>
+		<!-- Start: Previous -->
+		<a class="carousel-control-prev" href="#carousel-1" role="button"
+			data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span
+			class="visually-hidden">Previous</span></a>
+		<!-- End: Previous -->
+		<!-- Start: Next -->
+		<a class="carousel-control-next" href="#carousel-1" role="button"
+			data-bs-slide="next"><span class="carousel-control-next-icon"></span><span
+			class="visually-hidden">Next</span></a>
+		<!-- End: Next -->
+	</div>
+	<ol class="carousel-indicators">
+		<li data-bs-target="#carousel-1" data-bs-slide-to="0" class="active"></li>
+		<li data-bs-target="#carousel-1" data-bs-slide-to="1"></li>
+		<li data-bs-target="#carousel-1" data-bs-slide-to="2"></li>
+	</ol>
+	</div>
+	<!-- End: Hero Carousel -->
+	<!-- Start: Features Small Icons -->
+	<div class="container py-4 py-xl-5">
+		<div class="row mb-5">
+			<div class="col-md-8 col-xl-6 text-center mx-auto">
+				<h2 style="color: #fd780f; text-shadow: 2px 2px 1px #f1ecd1;">認養申請單</h2>
+			</div>
+		</div>
+	</div>
+	<!-- End: Features Small Icons -->
+
+
+	<section class="py-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-sm-10 m-auto">
+					<div
+						class="bg-white shadow border-top border-warning border-3 p-3 p-sm-5 rounded">
+
+                <form class="row g-3 needs-validation" novalidate id="applicationform">
+                		<div id="animalList"></div>
+						<div class="text-center mb-5">
+							<h2 style="font-weight: bold">認養申請表</h2>
+						</div>
+
+							<div class="col-md-4 position-relative">
+								<label for="validationTooltip01" class="form-label">動物編號</label>
+								<input type="text" class="form-control" id="animalId"
+									value="" required>
+								<div class="invalid-tooltip">請輸入動物編號</div>
+								
+							</div>
+
+							<div class="col-md-4 position-relative">
+								<label for="validationTooltip01" class="form-label">會員編號</label>
+								<input type="text" class="form-control" id="membId"
+									value="" required>
+								<div class="invalid-tooltip">請輸入編號</div>
+								
+							</div>
+
+							<div class="col-md-4 position-relative">
+								<label for="validationTooltip01" class="form-label">姓名
+									</label> <input type="text" class="form-control"
+									id="adopterName" value="" required>
+								<div class="invalid-tooltip">請輸入名字</div>
+								
+							</div>
+							
+							<div class="col-md-4 position-relative">
+								<label for="validationTooltip02" class="form-label">身分證
+								</label> <input type="text" class="form-control"
+									id="adopterIdNumber" value="" required>
+								<div class="invalid-tooltip">請輸入身分證</div>
+								
+							</div>
+							
+							<div class="col-md-4 position-relative">
+								<label for="validationTooltip02" class="form-label">地址
+									</label> <input type="text" class="form-control"
+									id="adopterAddress" value="" required>
+								<div class="invalid-tooltip">請輸地址</div>
+							</div>
+							
+							<div class="col-md-4 position-relative">
+								<label for="validationTooltip02" class="form-label">電話
+									</label> <input type="text" class="form-control"
+									id="adopterPhone" value="" required>
+								<div class="invalid-tooltip">請輸入電話</div>
+							</div>
+							
+							
+							<div class="col-md-4 position-relative">
+								<label for="validationTooltip02" class="form-label">職業
+									</label> <input type="text" class="form-control"
+									id="adopterJob" value="" required>
+								<div class="invalid-tooltip">請輸入職業</div>
+							</div>
+							
+						
+							
+							<div class="col-md-4 position-relative">
+								<label for="validationTooltip02" class="form-label">信箱
+									</label> <input type="text" class="form-control"
+									id="adopterEmail" value="" required>
+								<div class="invalid-tooltip">請輸入信箱</div>
+							</div>
+							
+
+							
+							<div class="col-12 text-center">
+								<button class="btn btn-primary btn-dark" type="submit"  id="check">送出
+								</button>
+							</div>
+							
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<footer class="text-center">
+		<div class="container text-muted py-4 py-lg-5">
+			<ul class="list-inline">
+				<li class="list-inline-item me-4"><a class="link-secondary"
+					href="#" style="color: #f8c544;">Web design</a></li>
+				<li class="list-inline-item me-4"><a class="link-secondary"
+					href="#">Development</a></li>
+				<li class="list-inline-item"><a class="link-secondary" href="#">Hosting</a></li>
+			</ul>
+			<ul class="list-inline">
+				<li class="list-inline-item me-4"><svg
+						xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+						fill="currentColor" viewBox="0 0 16 16" class="bi bi-facebook"
+						style="border-color: #fd780f; color: #fd780f;">
+            <path
+							d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z">
+            </path>
+          </svg></li>
+				<li class="list-inline-item me-4"><svg
+						xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+						fill="currentColor" viewBox="0 0 16 16" class="bi bi-twitter"
+						style="color: #fd780f;">
+            <path
+							d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z">
+            </path>
+          </svg></li>
+				<li class="list-inline-item"><svg
+						xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+						fill="currentColor" viewBox="0 0 16 16" class="bi bi-instagram"
+						style="border-color: #fd780f; color: #fd780f;">
+            <path
+							d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z">
+            </path>
+          </svg></li>
+			</ul>
+			<p class="mb-0">Copyright © 2023 PETRADISE</p>
+		</div>
+	</footer>
+	<!-- End: Footer Basic -->
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script
+		src="/assets/js/script.min.js?h=32682494dce76d2a09f180028c2dbc34"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../../assets/js/login.js"></script>
+    <script src="../../index/js/index.js"></script>
+	<script>
+	
+	document.addEventListener('DOMContentLoaded', function() {
+		  guardIsSignedIn();
+		});
+
+	// ------------------購物車項目初始化------------------
+	let shoppingItem = sessionStorage.getItem("shoppingItem");
+	if (shoppingItem) {
+		shoppingItem = JSON.parse(shoppingItem);
+	} else {
+		shoppingItem = {};
+	}
+
+	// 更新購物車商品數
+	function updateCartIcon() {
+		let totalItems = 0;
+		for (const productId in shoppingItem) {
+			totalItems += shoppingItem[productId].quantity;
+		}
+		$(".shopping-cart-total").text(`(${totalItems})`);
+	}
+
+	// 初始化購物車圖示數量
+	updateCartIcon();
+
+	// ------------------前往購物車------------------
+	$(".cart").on('click', function () {
+		location.href = "/shopping/pd_page/Cart.html";
+	});
+	
+	//去localStorage撈ID
+	
+	
+	$(document).ready(function() {
+		  let urlParam = new URLSearchParams(window.location.search);
+	      let queryValue = urlParam.get('animalId');
+		if(!queryValue) {
+			queryValue = localStorage.getItem('animalId');
+			localStorage.removeItem('animalId');
+			let url = window.location.href;
+			let currentUrl = new URL(url);
+			
+			let params = new URLSearchParams(currentUrl.search);
+			params.set('animalId', queryValue);
+			currentUrl.search = params.toString();
+			let newURL = currentUrl.toString();
+			window.history.replaceState({}, '', newURL);
+		} else {
+// 			localStorage.removeItem('animalId');
+		}
+
+		$.ajax({
+		  url: "/animals/" + queryValue,
+		  type: "GET",
+		  success: function(response) {
+// 			console.log("Data received successfully:", response);
+			var animal = response; // 單一動物的資料
+
+			var imageUrl = "data:image/jpeg;base64," + animal.animalPic ;
+			var cardHtml = '<div class="row row-cols-2 ">' +
+			  '<div class="col text-center justify-content-center">' +
+			  '<img src="' + imageUrl + '" class="rounded" alt="...">' +
+			  '</div>' +
+			  '<div class="col justify-content-center">' +
+			  '<table class="table table-borderless">' +
+			  '<tbody class="caption-top">' +
+			  '<tr>' +
+			  '<td style="border-color: #f77f00; width: 200px; font-weight: bold; font-size: 20px;">' +
+			  '<span style="color: rgb(221, 117, 0); background-color: rgba(221, 117, 0, 0);">' +
+			  animal.animalId +
+			  '</span>' +
+			  '</td>' +
+			  '</tr>' +
+			  '<tr>' +
+			  '<td style="border-color: #f77f00; width: 200px; font-weight: bold; font-size: 20px;">' +
+			  '<span style="color: rgb(221, 117, 0); background-color: rgba(221, 117, 0, 0);">' +
+			  animal.animalName +
+			  '</span>' +
+			  '</td>' +
+			  '</tr>' +
+			  '<tr>' +
+			  '<td style="border-color: #f77f00; width: 200px; font-weight: bold; font-size: 20px;">' +
+			  '<span style="color: rgb(221, 117, 0); background-color: rgba(221, 117, 0, 0);">' +
+			  animal.animalSex +
+			  '</span>' +
+			  '</td>' +
+			  '</tr>' +
+			  '<tr>' +
+			  '<td style="border-color: #f77f00; width: 200px; font-weight: bold; font-size: 20px;">' +
+			  '<span style="color: rgb(221, 117, 0); background-color: rgba(221, 117, 0, 0);">' +
+			  animal.animalAge +
+			  '</span>' +
+			  '</td>' +
+			  '</tr>' +
+			  '<tr>' +
+			  '<td style="border-color: #f77f00; width: 200px; font-weight: bold; font-size: 20px;">' +
+			  '<span style="color: rgb(221, 117, 0); background-color: rgba(221, 117, 0, 0);">' +
+			  animal.animalType +
+			  '</span>' +
+			  '</td>' +
+			  '</tr>' +
+			  '<tr>' +
+			  '<td style="border-color: #f77f00; width: 200px; font-weight: bold; font-size: 20px;">' +
+			  '<span style="color: rgb(221, 117, 0); background-color: rgba(221, 117, 0, 0);">' +
+			  animal.animalInfo +
+			  '</span>' +
+			  '</td>' +
+			  '</tr>' +
+			  '</tbody>' +
+			  '</table>' +
+			  '</div>' +
+			  '</div>';
+
+			$('#animalList').append(cardHtml);
+		  },
+		  error: function(xhr, status, error) {
+			console.log("Error occurred:", error);
+		  }
+		});
+		
+	
+		let memberrIDD = localStorage.getItem("memberId");
+		$.ajax({
+			url: `/members/id=${memberrIDD}`,
+			method: "GET",
+			dataType: "json",
+			success: function (AdoptedApplication) {
+				// 拿到會員資料
+				console.log(AdoptedApplication);
+				
+				// 拿取url中的變數
+				// let urlParam = new URLSearchParams(window.location.search);
+				// let queryValue = urlParam.get('animalId');
+				
+				// 將取得的資料放在修改表單裡
+				$("#animalId").val(queryValue);
+				$("#membId").val(AdoptedApplication.id);
+				$("#adopterName").val(AdoptedApplication.name);
+	// 	        $("#adopterIdNumber").val(AdoptedApplication.adopterIdNumber);
+				$("#adopterAddress").val(AdoptedApplication.address);
+				$("#adopterPhone").val(AdoptedApplication.phone);
+				$("#adopterEmail").val(AdoptedApplication.email);
+			},
+			
+			error: function (error) {
+				console.error("AJAX Error: " + error);
+			}
+		});
+	})
+	
+	
+	document.addEventListener('DOMContentLoaded', function() {
+		  guardIsSignedIn();
+		});
+	
+	
+	function getCurrentLoggedInMember() {
+	    var loggedInMember = localStorage.getItem('loggedInMember');
+	    if (loggedInMember) {
+	        return JSON.parse(loggedInMember);
+	    } else {
+	        return null;
+	    }
+	}
+	
+	 $("#check").click(function() {
+		 
+			let urlParam = new URLSearchParams(window.location.search);
+		    let queryValue = urlParam.get('animalId');
+	       
+	        var adoptedApplication = {
+// 	            adoptermembId: $("#adopteranimembId").val(),	
+	            membId: $("#membId").val(),	
+        		animalId: queryValue,	
+	            adopterIdNumber: $("#adopterIdNumber").val(),
+	            adopterName: $("#adopterName").val(),
+	            adopterAddress: $("#adopterAddress").val(),
+	            adopterPhone: $("#adopterPhone").val(),
+	            adopterJob: $("#adopterJob").val(),
+	            adopterEmail: $("#adopterEmail").val(),
+	            adopterStatus: 0
+	        };
+	       console.log(adoptedApplication);
+	        $.ajax({
+	            url: "/adopted_applications/create",
+	            method: "POST",
+	            contentType: "application/json",
+	            dataType: "text",
+	            data: JSON.stringify(adoptedApplication),
+	            success: function(response) {
+	                console.log("Adopted application saved successfully");
+	                
+	              // window.location.href ="animal_39/Frontanimal/animalbrowse.html";
+	              
+	            },
+	            error: function(error) {
+	                console.error("AJAX Error: " + error);
+	             
+	            }
+	        });
+	    });
+	
+	
+	
+	
+	
+	
+	$(function () {
+		  'use strict'
+
+		  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+		  var forms = document.querySelectorAll('.needs-validation')
+
+		  // Loop over them and prevent submission
+		  // 表單無效
+		  Array.prototype.slice.call(forms)
+		    .forEach(function (form) {
+		      form.addEventListener('submit', function (event) {
+		        if (!form.checkValidity()) {
+		          event.preventDefault()
+		          event.stopPropagation()
+		        }
+		        else {
+		          // 表單驗證通過
+		          // 阻止表單提交
+		          event.preventDefault(); 
+		        }
+		        
+		        form.classList.add('was-validated')
+		      }, false);
+		    });
+		});
+
+
+	
+	
+	document.getElementById('check').addEventListener('click', function(event) {
+		  event.preventDefault();
+
+		  var form = document.querySelector('.needs-validation');
+		  if (form.checkValidity()) {
+		    Swal.fire({
+		      title: '恭喜申請成功',
+		      text: '請呵護牠',
+		      icon: 'success',
+		      confirmButtonText: '確定'
+		    }).then(function () {
+ 		     window.location.href = '/animal_39/Frontanimal/animalbrowse.html';
+		    });
+		  } else {
+		    Swal.fire({
+		      title: '要乖乖填好喔!',
+		      text: '請填寫必填項目。',
+		      icon: 'error',
+		      confirmButtonText: '確定'
+		    });
+		  }
+		});
+
+
+	
+
+	</script>
+
+</body>
+
+</html>

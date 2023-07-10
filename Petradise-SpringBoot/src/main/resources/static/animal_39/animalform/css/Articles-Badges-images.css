@@ -1,0 +1,35 @@
+.fit-cover {
+  object-fit: cover;
+}
+
+.form-label {
+  margin: 10px;
+  padding: 20px;
+  padding-right: 6px;
+}
+
+select.location {
+  width: 10px;
+  height: 500px;
+}
+
+div.pet {
+  width: 300px;
+  height: 200px;
+}
+
+
+
+.btn-search {
+  background-color: #A67C52;
+  margin-left: 23px;
+}
+
+div.search.style {
+  background-color: rgba(166, 124, 82, 0.3);
+  border-radius: 15px;
+  padding-right: 5%;
+  margin-right: 5%;
+  padding-left: 5%;
+  margin-left: 5%;
+}

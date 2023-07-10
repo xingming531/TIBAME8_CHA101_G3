@@ -1,0 +1,210 @@
+/* Reset */
+* {
+	box-sizing: border-box;
+}
+
+h1 {
+	margin: 15px 0 15px 0;
+	font-weight: 1000;
+	color: white;
+}
+
+/* Utility Classes */
+.form_container {
+	max-width: 1100px;
+	margin: auto;
+	padding: 50px;
+}
+
+.btn_set {
+	border: none;
+	border-radius: 5px;
+	margin: 25px 0;
+	padding: 20px;
+	width: 100%;
+	background: goldenrod;
+	color: #FFF;
+}
+
+.btn_set:hover {
+	background: #f9ecdb;
+	color: #333;;
+	cursor: pointer;
+	box-shadow: 0 0 5px #ffe7dd, 0 0 25px #ffe7dd, 0 0 50px #ffe7dd, 0 0
+		100px #ffe7dd;
+}
+
+/* Main Styling */
+html, body {
+	font-size: 16px;
+	background: white;
+	color: black;
+}
+
+/* Form Styling */
+#form-wrap {
+	margin: auto;
+	background: rgba(230, 150, 9, 0.5);
+	padding: 20px;
+	border-radius: 5px;
+	max-width: 80%;
+}
+
+
+#form-wrap h1, #form-wrap p {
+	text-align: center;
+	padding: 5px 0;
+}
+
+#form-wrap .form-group label {
+	display: block;
+	padding: 0;
+	margin-top: 30px;
+}
+
+#form-wrap .form-group input {
+	width: 100%;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.gender input {
+	display: inline;
+}
+
+#form-wrap .form-group input:focus {
+	outline: none;
+	border: 1px solid rgb(210, 134, 12);
+	box-shadow: 0 0 5px #ffe7dd, 0 0 10px #ffe7dd, 0 0 10px #ffe7dd, 0 0
+		10px #ffe7dd;
+}
+
+#form-wrap .bottom-text {
+	font-size: 12px;
+}
+
+.mark {
+	display: block;
+	width: 30%;
+	background-color: #5fcf80;
+	color: white;
+	padding: 0.5rem;
+	padding-right: 1rem;
+	text-shadow: 1px 1px 2px grey;
+	border-top-right-radius: 40px;
+	border-bottom-right-radius: 40px;
+	font-size: 25px;
+}
+
+legend>span {
+	font-family: 'Noto Serif TC', serif;
+	text-shadow: 2px 2px gray;
+}
+
+div.picture>label {
+	border: 1px solid black;
+	display: flex;
+	width: 100px;
+	height: 100px;
+}
+
+div.picture {
+	/* border: 1px solid red; */
+	width: 100%;
+	height: 500px;
+	display: inline-block;
+}
+
+div.picture>img {
+	max-width: 100%;
+	max-height: 100%;
+	border: 1px solid black;
+}
+
+div.preview {
+	border: 1px solid black;
+	padding: 10px;
+	margin: 0 0 15px 0;
+	background-color: white;
+}
+
+
+
+div.picture {
+	background-image: url(img/bg.gif);
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.5;
+}
+
+/* bootstrap樣式更改 */
+.help-block {
+	margin: 0;
+	color: red;
+}
+
+ .navbar-collapse { 
+ 	padding-left: 0; 
+ } 
+
+.btn_set[disabled] {
+	pointer-events: auto !important;
+	cursor: not-allowed !important;
+	opacity: 1 !important;
+	background-color: gray;
+}
+
+ ul.navbar { 
+ 	display: inline-block; 
+ }
+
+div.collapse {
+	padding: 0;
+}
+
+.trainer_gif {
+	position: absolute;
+	margin-top: -30px;
+}
+.hotel_gif{
+	position: absolute;
+	margin-top: -40px;
+}
+
+  #navbar {
+  	font-family: "Noto Sans JP", sans-serif; 
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-grow: 1;
+    text-align: center;
+    font-size:32px;
+    padding-right:135px;
+    letter-spacing: 1em;
+ 	color: white;  /* 文字填充顏色 */
+    text-shadow: -3px 0 #fd780f, 0 3px #fd780f, 3px 0 #fd780f, 0 -3px #fd780f;
+    
+ }
+ .navbar-brand p{
+	font-family: "Noto Sans JP", sans-serif;
+	color: white;  /* 文字填充顏色 */
+    text-shadow: -1px 0 #fd780f, 0 1px #fd780f, 1px 0 #fd780f, 0 -1px #fd780f;
+ }
+ 
+
+.emailCheck{
+	display:inline-block;
+	position:relative;
+	top:-10px;
+	
+	border:3px solid black;
+    animation: emailcheck 1s linear infinite;
+    background-color:#f1ecd1;
+    font-size:16px;   
+}
+
+@keyframes emailcheck {
+    0% {border-color: red;}
+    50% {border-color: #f8c544;}
+    100% {border-color: red;}
+}

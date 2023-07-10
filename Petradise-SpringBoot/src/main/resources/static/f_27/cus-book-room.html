@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>客戶-預約訂房</title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/assets/fonts/fontawesome-all.min.css">
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .content {
+            flex: 1;
+            margin-right: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .aside {
+            flex: 0 0 200px;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        .room-info {
+            margin-bottom: 20px;
+        }
+
+        .room-info h5 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .room-info p {
+            margin: 0;
+            color: #555;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input {
+            width: 20%;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .image {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .image img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+        }
+
+        .confirm-button {
+            width: 100%;
+            height: 50px;
+            max-width: 200px;
+            margin-top: auto;
+            background-color: beige;
+            border-radius: 5px;
+            border-color: tan;
+            border-width: 5px;
+        }
+
+        .is-invalid {
+            border: 1px solid red;
+            /* Add a red border for invalid input */
+        }
+
+        .error-message {
+            color: red;
+            /* Set the color of the error message to red */
+            font-size: 14px;
+            /* Customize the font size of the error message */
+            margin-top: 5px;
+            /* Add some spacing above the error message */
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md py-3" data-aos="zoom-in" data-aos-duration="1500">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="/index.html" style="position: sticky;top: 0;">
+                <img width="75" height="41" src="/assets/img/logo-only.png">
+            </a>
+
+            <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-3"
+                style="border-color: rgb(241,236,209);">
+                <span class="visually-hidden">Toggle navigation</span>
+                <span class="navbar-toggler-icon"
+                    style="--bs-primary: #fd780f;--bs-primary-rgb: 253,120,15;--bs-secondary: #e69609;--bs-secondary-rgb: 230,150,9;color: rgb(241,236,209);">
+                </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navcol-3" style="background: #ffffff;">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item dropdown" style="width: 100px;margin: 0px 0px 0px 10px">
+                        <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown"
+                            data-bs-auto-close="outside" href="/index.html" style="margin: 10px 0px 0px;">關於我們</a>
+                        <div class="dropdown-menu"
+                            style="min-width: 110px;margin: 1px 0px 0px;border: 0px none rgba(33,37,41,0);">
+                            <div class="dropdown-divider"
+                                style="color: rgba(33,37,41,0);margin: 4px 0px;border-color: rgb(241,236,209);">
+                            </div>
+                            <a class="dropdown-item" href="/index.html#news-contain" style="font-size: 14px;">最新消息</a>
+                            <a class="dropdown-item" href="/index.html#aboutMe-contain"
+                                style="font-size: 14px;">關於我們</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown" style="width: 100px;margin: 0px 0px 0px 10px">
+                        <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown"
+                            data-bs-auto-close="outside" href="#" style="margin: 10px 0px 0px;">毛孩旅館</a>
+                        <div class="dropdown-menu"
+                            style="min-width: 110px;margin: 1px 0px 0px;border: 0px none rgba(33,37,41,0);">
+
+                            <div class="dropdown-divider"
+                                style="color: rgba(33,37,41,0);margin: 4px 0px;border-color: rgb(241,236,209);">
+                            </div>
+                            <a class="dropdown-item" href="/hotel/searchHotel.html" style="font-size: 14px">預約訂房</a>
+                            <a class="dropdown-item join-hotelowner" href="/owner/SignUp.html"
+                                style="font-size: 14px;color: #fd780f;">加入我們</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown" style="width: 100px;margin: 0px 0px 0px 10px">
+                        <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown"
+                            data-bs-auto-close="outside" href="#" style="margin: 10px 0px 0px;">浪浪收容</a>
+                        <div class="dropdown-menu"
+                            style="min-width: 110px;margin: 1px 0px 0px;border: 0px none rgba(33,37,41,0);">
+                            <div class="dropdown-divider"
+                                style="color: rgba(33,37,41,0);margin: 4px 0px;border-color: rgb(241,236,209);">
+                            </div>
+                            <a class="dropdown-item" href="/animal_39/Frontanimal/animalbrowse.html"
+                                style="font-size: 14px">浪浪認養</a>
+                            <a class="dropdown-item lostPet" href="/lostPet/lost.html" style="font-size: 14px">遺失協尋</a>
+                            <a class="dropdown-item" href="/animalCorporation/signup.html"
+                                style="font-size: 14px">加入我們</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item" style="height: 50px;width: 100px;margin: 0px 0px 0px 10px">
+                        <a class="nav-link" href="/front-product-list/front-product-list.html"
+                            style="width: 100px;margin: 10px 0px 0px;">寵物商城</a>
+                    </li>
+
+                    <!--          <li class="nav-item dropdown" style="width: 100px;margin: 0px 0px 0px 10px">-->
+                    <!--            <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown"-->
+                    <!--              data-bs-auto-close="outside" href="#" style="margin: 10px 0px 0px;" target="_parent">客服中心</a>-->
+                    <!--            <div class="dropdown-menu" style="min-width: 110px;margin: 1px 0px 0px;border: 0px none rgba(33,37,41,0);">-->
+                    <!--              <div class="dropdown-divider" style="color: rgba(33,37,41,0);margin: 4px 0px;border-color: rgb(241,236,209);">-->
+                    <!--              </div>-->
+                    <!--              <a class="dropdown-item" href="#" style="font-size: 14px">常見問題</a>-->
+                    <!--              <a class="dropdown-item" href="#" style="font-size: 14px">服務認證</a>-->
+                    <!--              <a class="dropdown-item" href="#" style="font-size: 14px">聯絡我們</a>-->
+                    <!--            </div>-->
+                    <!--          </li>-->
+
+                </ul>
+
+                <!-- Shopping Cart -->
+                <div class="btn btn-primary cart"
+                    style="cursor: pointer;margin-top: 10px;margin-right: 10px;border-style: none;background: rgb(255,255,255);color: #fd780f;height: 38px;width: 100px;">
+                    <span class="fas fa-shopping-cart"
+                        style="margin: 9px 5px 0px -12px;padding: 0px;font-size: 24px;color: #fd780f;height: 26px;width: 26px;margin-top: 0px;margin-right: 3px;margin-bottom: 3px;margin-left: 3px;">
+                    </span>
+                    <span class="shopping-cart-total"></span>
+                </div>
+
+                <!-- Member -->
+                <div class="btn-group" style="margin: 10px 0px 0px;">
+                    <a class="btn btn-primary" type="button"
+                        style="height: 38px;width: 90px;background: #fd780f;border-color: rgb(255, 255, 255);padding-top: 6px">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
+                            viewBox="0 0 16 16" class="bi bi-person-circle"
+                            style="margin: 0px 3px 3px;padding: 0px;font-size: 26px;">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
+                            <path fill-rule="evenodd"
+                                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z">
+                            </path>
+                        </svg>會員
+                    </a>
+                    <button class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+                        aria-expanded="false" type="button"
+                        style="background: #fd780f;border-color: rgb(255, 255, 255);width: 29.5833px;"></button>
+                    <div class="dropdown-menu" style="min-width: 118px;background: #fd780f;margin: 1px 0px 0px;">
+                        <a class="dropdown-item navigate-signin" href="#" style="color: #ffffff;">登入/註冊</a>
+                        <a class="dropdown-item navigate-member-center" href="#" style="color: #ffffff;">會員中心</a>
+                        <a class="dropdown-item logout" style="color: #ffffff;">登出</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </nav>
+    <div class="container">
+        <div class="content">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">基本資料</h5>
+                </div>
+                <div class="card-body">
+                    <div class="card-text">客戶名稱: <span id="customer-name"></span></div>
+                    <div>連絡電話: <span id="phone"></span></div>
+                    <div>Email: <span id="email"></span></div>
+                </div>
+                <div class="card-header">
+                    <h5 class="mb-0">寵物資料</h5>
+                </div>
+                <div class="card-body">寵物名稱: <input type="text" class="form-control" id="pet-name"></div>
+                <div class="card-header">
+                    <h5 class="mb-0">付款資料</h5>
+                </div>
+                <div class="card-body">
+                    <label class="form-label">
+                        <select id="payment-method" class="d-inline-block form-select form-select-sm">
+                            <option value="0" selected="">到店付款</option>
+                            <option value="1">信用卡結帳</option>
+                        </select><br>
+                    </label>
+                    <div class="form-group credit-card-fields">
+                        <input type="text" class="form-control" maxlength="4" placeholder="XXXX">
+                        <input type="text" class="form-control" maxlength="4" placeholder="XXXX">
+                        <input type="text" class="form-control" maxlength="4" placeholder="XXXX">
+                        <input type="text" class="form-control" maxlength="4" placeholder="XXXX">
+                    </div>
+                    <div class="form-group credit-card-fields">
+                        <input type="text" class="form-control" maxlength="3" placeholder="CVV">
+                        <input type="text" class="form-control" maxlength="4" placeholder="Expiration Date">
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">特殊需求</h5>
+                    </div>
+                    <div class="card-body">
+                        <textarea class="form-control" cols="50" id="new-review" name="comment"
+                            placeholder="Enter here..." rows="5"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <aside class="aside">
+            <div class="image">
+                <img id="room-image" src="">
+            </div>
+            <div class="room-info">
+                <h5>入住 / 退房日期</h5>
+                <p>入住: <span id="check-in-date"></span></p>
+                <p>退房: <span id="check-out-date"></span></p>
+            </div>
+            <div class="room-info">
+                <h5>房型</h5>
+                <p><span id="room-type-name"></span></p>
+            </div>
+            <div class="room-info">
+                <h5>寵物類型</h5>
+                <p id="room-pet-type"></p>
+            </div>
+            <div class="room-info">
+                <h5>房型資訊</h5>
+                <p id="room-type-about"></p>
+            </div>
+            <strong>
+                <div class="room-info">
+                    <h5>總金額TWD</h5>
+                    <span id="room-type-price" style="color: black;"></span>
+                    <span id="total-price" style="color: black;"></span>
+                </div>
+            </strong>
+            <button class="confirm-button" id="confirm-pay">確認訂房&付款</button>
+        </aside>
+    </div>
+
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Add this script block after including the jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/login.js"></script>
+
+    <script src="/assets/js/news.js"></script>
+    <script src="/assets/js/countUp.js"></script>
+    <!-- login -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/index/js/index.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            guardIsSignedIn();
+
+            const memberId = getMemberId();
+
+            // Retrieve the values from session storage
+            const checkInDate = sessionStorage.getItem('checkInDate');
+            const checkOutDate = sessionStorage.getItem('checkOutDate');
+            const roomTypeId = sessionStorage.getItem('roomTypeId');
+
+            // Update the corresponding elements with the retrieved values
+            $('#check-in-date').text(checkInDate);
+            $('#check-out-date').text(checkOutDate);
+
+            // Call the functions to fetch dynamic content when the page is ready
+            fetchCustomerInfo();
+            fetchImage();
+            fetchRoomInfo();
+
+
+
+            // Function to fetch customer information
+            function fetchCustomerInfo() {
+                $.ajax({
+                    url: `/members/id=${memberId}`, // Replace with the actual API endpoint
+                    method: 'GET',
+                    success: function (response) {
+                        // Update the customer information elements
+                        $('#customer-name').text(response.name);
+                        $('#phone').text(response.phone);
+                        $('#email').text(response.email);
+                    },
+                    error: function (error) {
+                        console.error('Error:', error);
+                        // Handle error case
+                    }
+                });
+            }
+
+            // Function to fetch image
+            function fetchImage() {
+                $.ajax({
+                    url: `/roomTypes/${roomTypeId}/images`,
+                    method: 'GET',
+                    success: function (response) {
+                        // Update the room image
+                        var imageUrl = response[0];
+                        var img = new Image();
+                        img.onload = function () {
+                            // Image loaded successfully
+                            $('#room-image').attr('src', imageUrl);
+                        };
+                        img.onerror = function () {
+                            // Image failed to load, display substitute image
+                            $('#room-image').attr('src', '../assets/img/logo-only.png');
+                            $('#room-image').attr('alt', 'No Image Available');
+                        };
+                        img.src = imageUrl;
+                    },
+                    error: function (error) {
+                        console.error('Error:', error);
+                        // Handle error case
+                    }
+                });
+            }
+
+            // Fetch the room type information
+            function fetchRoomInfo() {
+                $.ajax({
+                    url: `/roomTypes/${roomTypeId}`, // Replace with the actual API endpoint
+                    method: 'GET',
+                    success: function (response) {
+                        // Update the room type information
+                        var roomTypeName = response.roomTypeName
+                        var roomPetType = response.roomPetType;
+                        var roomTypeAbout = response.roomTypeAbout;
+                        var roomTypePrice = response.roomTypePrice;
+
+                        // Update the DOM with the room type information
+                        $('#room-type-name').text(roomTypeName);
+                        $('#room-pet-type').text(roomPetType);
+                        $('#room-type-about').text(roomTypeAbout);
+
+                        // Calculate the total price
+                        const { numNights, totalPrice } = calculateTotalPrice(roomTypePrice, checkInDate, checkOutDate);
+
+                        // Update the room type price with additional text
+                        const additionalText = ` x ${numNights}晚 = ${totalPrice} 元`;
+                        $('#room-type-price').text(roomTypePrice);
+                        $('#total-price').text(additionalText);
+
+                    },
+                    error: function (error) {
+                        console.error('Error:', error);
+                        // Handle error case
+                    }
+                });
+            }
+
+            // Function to calculate nights of stay
+            function calculateTotalPrice(roomTypePrice, checkInDate, checkOutDate) {
+                const checkInDateCal = new Date(checkInDate);
+                const checkOutDateCal = new Date(checkOutDate);
+                const timeDiffMs = checkOutDateCal.getTime() - checkInDateCal.getTime();
+                const numNights = Math.floor(timeDiffMs / (24 * 60 * 60 * 1000));
+                const totalPrice = roomTypePrice * numNights;
+
+                return {
+                    numNights: numNights,
+                    totalPrice: totalPrice
+                };
+            }
+
+            // Add event listener to the "確認訂房&付款" button
+            $('#confirm-pay').click(function () {
+                const petName = $('#pet-name').val();
+                const status = '0';
+                const payMethod = $('#payment-method').val();
+                const price = $('#room-type-price').text();
+                const specialReq = $('#new-review').val();
+
+                if (petName.trim() !== '') {
+
+                    // Create the data object with the required information
+                    var data = {
+                        memId: memberId,
+                        roomTypeId: roomTypeId,
+                        petName: petName,
+                        checkInDate: checkInDate,
+                        checkOutDate: checkOutDate,
+                        status: status,
+                        payMethod: payMethod,
+                        price: price,
+                        specialReq: specialReq
+                    };
+
+                    // Send the data to the specified endpoint
+                    $.ajax({
+                        url: '/room-order/customer/add',
+                        method: 'POST',
+                        data: JSON.stringify(data),
+                        contentType: 'application/json',
+                        success: function (response) {
+                            // Show the success message using SweetAlert
+                            Swal.fire({
+                                title: '感謝您的預定！',
+                                imageUrl: 'https://unsplash.it/400/200',
+                                imageWidth: 400,
+                                imageHeight: 200,
+                                imageAlt: 'Custom image',
+                            }).then(function () {
+                                // After pressing "OK", redirect the user to the specified page
+                                window.location.href = '/f_27/cus-orders.html';
+                            });
+                        }
+                        ,
+                        error: function (error) {
+                            console.error('Error:', error);
+                            // Handle error case
+                        }
+                    });
+                } else {
+                    $('#pet-name').focus(); // Focus on the input box
+                    $('#pet-name').addClass('is-invalid'); // Add a CSS class to indicate the error
+                    Swal.fire({
+                        icon: 'warning',
+                        title: '寵物名稱忘了打喔 ~'
+                    })
+                }
+            });
+
+            // Add event listener to the payment method
+            $('.form-select').on('change', function () {
+                $('.credit-card-fields').toggle($(this).val() === "1");
+            }).trigger('change');
+
+            // ------------------購物車項目初始化------------------
+            let shoppingItem = sessionStorage.getItem("shoppingItem");
+            if (shoppingItem) {
+                shoppingItem = JSON.parse(shoppingItem);
+            } else {
+                shoppingItem = {};
+            }
+
+            // 更新購物車商品數
+            function updateCartIcon() {
+                let totalItems = 0;
+                for (const productId in shoppingItem) {
+                    totalItems += shoppingItem[productId].quantity;
+                }
+                $(".shopping-cart-total").text(`(${totalItems})`);
+            }
+
+            // 初始化購物車圖示數量
+            updateCartIcon();
+
+
+            // ------------------前往購物車------------------
+            $(".cart").on('click', function () {
+                location.href = "/shopping/pd_page/Cart.html"
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+#success_message {
+	display: none;
+}
+
+* {
+	box-sizing: border-box;
+	font-size: 16px;
+}
+
+.container {
+	width: 900px;
+	margin: 0 auto;
+}
+
+.container h1 {
+	margin: 20px;
+	text-align: center;
+}
+
+.container form {
+	padding: 20px;
+	background: #EBF0F4;
+	border-radius: 10px;
+}
+
+.form-group {
+	border: 1px solid white;
+	box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2);
+	border-radius: 20px;
+	display: block;
+	align-items: center;
+	padding: 0 0 100px 30px;
+	margin-bottom: 20px;
+	height: 60px;
+}
+
+.help-block.error {
+	margin-bottom: 5px;
+}
+
+.messages {
+	margin: 10px 5px;
+	color: #dc3545
+}
+
+label {
+	width: auto;
+	white-space: nowrap;
+}
+
+div.text {
+	/* border: 1px solid black; */
+	display: inline-block;
+	width: 80px;
+	margin-left: 50px;
+}
+
+.form-control{
+	display: inline-block;
+	position: relative;
+	margin-right: 30px;
+	min-width: 500px !important;
+	max-width: 500px !important;
+	width: 500px;
+}
+
+
+
+.help-block {
+	font-size: 12px;
+	display: block;
+	position: relative;
+	margin-top: 2px;
+	color: red;
+	width: 300px;
+}
+
+.well {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 700px;
+}
+
+.change_password {
+	display: inline-block;
+	position: relative;
+	color: blue;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#owner_password {
+	cursor: not-allowed;
+	background-color: #eaecf4;
+}
+
+#hotel_lic_id {
+	cursor: not-allowed;
+	background-color: #eaecf4;
+}
+.hotelLicPic_btn {
+	border: none;
+	border-radius: 5px;
+	width:50px;
+	height:40px;
+	background: goldenrod;
+	color: #FFF;
+	background-color:#f1ecd1
+}
+
+.update_btn, .save_btn{
+	border: none;
+	border-radius: 5px;
+	width:60px;
+	height:40px;
+	background: goldenrod;
+	color: #574f36;
+	background-color:#f1ecd1;
+	margin:10px;
+
+}
+
+.save_btn{
+display: none;
+}
+
+button:hover {
+	background: #f8c544;
+	color: #333;;
+	cursor: pointer;
+}
+button:active {
+  background-color: #e69609;
+}
+
+.change_password{
+	font-size:20px;
+	cursor:url('./img/graycat.png');
+	
+}
+#owner_id{
+cursor:not-allowed;
+}

@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<title>收容業主註冊</title>
+
+<link
+	href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500&display=swap"
+	rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="shortcut icon" href="/assets/img/fav_icon.png" type="image/x-icon">
+
+<link rel="stylesheet" type="text/css"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+
+
+
+<link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=ABeeZee&amp;display=swap">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Alata&amp;display=swap">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Alef&amp;display=swap">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Allerta&amp;display=swap">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Almarai&amp;display=swap">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Amiko&amp;display=swap">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Andika&amp;display=swap">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Anek+Kannada&amp;display=swap">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Anonymous+Pro&amp;display=swap">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Anybody&amp;display=swap">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Azeret+Mono&amp;display=swap">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=B612+Mono&amp;display=swap">
+<link rel="stylesheet" href="fonts/fontawesome-all.min.css">
+<link rel="stylesheet" href="./css/styles.min.css">
+
+
+<style>
+/* Reset */
+* {
+	box-sizing: border-box;
+}
+
+h1 {
+	margin: 15px 0 15px 0;
+	font-weight: 1000;
+	color: white;
+}
+
+/* Utility Classes */
+.form_container {
+	max-width: 1100px;
+	margin: auto;
+	padding: 50px;
+}
+
+.btn_set {
+	border: none;
+	border-radius: 5px;
+	margin: 25px 0;
+	padding: 20px;
+	width: 100%;
+	background: goldenrod;
+	color: #FFF;
+}
+
+.btn_set:hover {
+	background: rgb(80, 159, 190);;
+	color: #333;;
+	cursor: pointer;
+}
+
+/* Main Styling */
+html, body {
+	font-size: 16px;
+	background: white;
+	color: black;
+}
+
+/* Form Styling */
+#form-wrap {
+	margin: auto;
+	background: rgba(230, 150, 9, 0.5);
+	padding: 20px;
+	border-radius: 5px;
+	max-width: 80%;
+}
+
+#form-wrap h1, #form-wrap p {
+	text-align: center;
+	padding: 5px 0;
+}
+
+#form-wrap .form-group label {
+	display: block;
+	padding: 0;
+	margin-top: 30px;
+}
+
+#form-wrap .form-group input {
+	width: 100%;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.gender input {
+	display: inline;
+}
+
+#form-wrap .form-group input:focus {
+	outline: none;
+	border: 1px solid rgb(210, 134, 12);
+}
+
+#form-wrap .bottom-text {
+	font-size: 12px;
+}
+
+.mark {
+	display: block;
+	width: 30%;
+	background-color: #5fcf80;
+	color: white;
+	padding: 0.5rem;
+	padding-right: 1rem;
+	text-shadow: 1px 1px 2px grey;
+	border-top-right-radius: 40px;
+	border-bottom-right-radius: 40px;
+	font-size: 25px;
+}
+
+legend>span {
+	font-family: 'Noto Serif TC', serif;
+	text-shadow: 2px 2px gray;
+}
+
+div.picture>label {
+	border: 1px solid black;
+	display: flex;
+	width: 100px;
+	height: 100px;
+}
+
+
+
+.contact_form {
+	padding: 20px;
+	border: 15px solid transparent;
+	border-image: url(img/cat.gif ) 35 round;
+}
+
+
+/* bootstrap樣式更改 */
+.help-block {
+	margin: 0;
+	color: red;
+}
+
+.navbar-collapse {
+	padding-left: 0;
+}
+
+.btn_set[disabled] {
+	pointer-events: auto !important;
+	cursor: not-allowed !important;
+	opacity: 1 !important;
+	background-color: gray;
+}
+
+ul.navbar {
+	display: inline-block;
+}
+
+div.collapse {
+	padding: 0;
+}
+</style>
+
+</head>
+
+<body>
+<nav class="navbar navbar-light navbar-expand-md py-3" data-aos="zoom-in" data-aos-duration="1500">
+	<div class="container">
+		<a class="navbar-brand d-flex align-items-center" href="/index.html" style="position: sticky;top: 0;">
+			<img width="75" height="41" src="/assets/img/logo-only.png">
+		</a>
+
+		<button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-3"
+				style="border-color: rgb(241,236,209);">
+			<span class="visually-hidden">Toggle navigation</span>
+			<span class="navbar-toggler-icon"
+				  style="--bs-primary: #fd780f;--bs-primary-rgb: 253,120,15;--bs-secondary: #e69609;--bs-secondary-rgb: 230,150,9;color: rgb(241,236,209);">
+        </span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navcol-3" style="background: #ffffff;">
+			<ul class="navbar-nav mx-auto">
+				<li class="nav-item dropdown" style="width: 100px;margin: 0px 0px 0px 10px">
+					<a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown"
+					   data-bs-auto-close="outside" href="/index.html" style="margin: 10px 0px 0px;">關於我們</a>
+					<div class="dropdown-menu" style="min-width: 110px;margin: 1px 0px 0px;border: 0px none rgba(33,37,41,0);">
+						<div class="dropdown-divider"
+							 style="color: rgba(33,37,41,0);margin: 4px 0px;border-color: rgb(241,236,209);">
+						</div>
+						<a class="dropdown-item" href="/index.html#news-contain" style="font-size: 14px;">最新消息</a>
+						<a class="dropdown-item" href="/index.html#aboutMe-contain" style="font-size: 14px;">關於我們</a>
+					</div>
+				</li>
+
+				<li class="nav-item dropdown" style="width: 100px;margin: 0px 0px 0px 10px">
+					<a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown"
+					   data-bs-auto-close="outside" href="#" style="margin: 10px 0px 0px;">毛孩旅館</a>
+					<div class="dropdown-menu" style="min-width: 110px;margin: 1px 0px 0px;border: 0px none rgba(33,37,41,0);">
+
+						<div class="dropdown-divider" style="color: rgba(33,37,41,0);margin: 4px 0px;border-color: rgb(241,236,209);">
+						</div>
+						<a class="dropdown-item" href="/hotel/searchHotel.html" style="font-size: 14px">預約訂房</a>
+						<a class="dropdown-item join-hotelowner" href="/owner/SignUp.html" style="font-size: 14px;color: #fd780f;">加入我們</a>
+					</div>
+				</li>
+
+				<li class="nav-item dropdown" style="width: 100px;margin: 0px 0px 0px 10px">
+					<a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown"
+					   data-bs-auto-close="outside" href="#" style="margin: 10px 0px 0px;">浪浪收容</a>
+					<div class="dropdown-menu" style="min-width: 110px;margin: 1px 0px 0px;border: 0px none rgba(33,37,41,0);">
+						<div class="dropdown-divider"
+							 style="color: rgba(33,37,41,0);margin: 4px 0px;border-color: rgb(241,236,209);">
+						</div>
+						<a class="dropdown-item" href="/animal_39/Frontanimal/animalbrowse.html" style="font-size: 14px">浪浪認養</a>
+						<a class="dropdown-item lostPet" href="/lostPet/lost.html" style="font-size: 14px">遺失協尋</a>
+						<a class="dropdown-item" href="/animalCorporation/signup.html" style="font-size: 14px">加入我們</a>
+					</div>
+				</li>
+
+				<li class="nav-item" style="height: 50px;width: 100px;margin: 0px 0px 0px 10px">
+					<a class="nav-link" href="/front-product-list/front-product-list.html" style="width: 100px;margin: 10px 0px 0px;">寵物商城</a>
+				</li>
+
+			</ul>
+
+			<!-- Shopping Cart -->
+			<div class="btn btn-primary cart" style="cursor: pointer;margin-top: 10px;margin-right: 10px;border-style: none;background: rgb(255,255,255);color: #fd780f;height: 38px;width: 100px;">
+            <span class="fas fa-shopping-cart"
+				  style="margin: 9px 5px 0px -12px;padding: 0px;font-size: 24px;color: #fd780f;height: 26px;width: 26px;margin-top: 0px;margin-right: 3px;margin-bottom: 3px;margin-left: 3px;">
+            </span>
+				<span class="shopping-cart-total"></span>
+			</div>
+
+			<!-- Member -->
+			<div class="btn-group" style="margin: 10px 0px 0px;">
+				<a class="btn btn-primary" type="button" style="height: 38px;width: 90px;background: #fd780f;border-color: rgb(255, 255, 255);padding-top: 6px">
+					<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16"
+						 class="bi bi-person-circle" style="margin: 0px 3px 3px;padding: 0px;font-size: 26px;">
+						<path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
+						<path fill-rule="evenodd"
+							  d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z">
+						</path>
+					</svg>會員
+				</a>
+				<button class="btn btn-primary dropdown-toggle dropdown-toggle-split"
+						data-bs-toggle="dropdown" aria-expanded="false" type="button"
+						style="background: #fd780f;border-color: rgb(255, 255, 255);width: 29.5833px;"></button>
+				<div class="dropdown-menu" style="min-width: 118px;background: #fd780f;margin: 1px 0px 0px;">
+					<a class="dropdown-item navigate-signin" href="#" style="color: #ffffff;">登入/註冊</a>
+					<a class="dropdown-item navigate-member-center" href="#" style="color: #ffffff;">會員中心</a>
+					<a class="dropdown-item logout" style="color: #ffffff;">登出</a>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+</nav>
+
+	<main>
+		<div class="form_container">
+			<div id="form-wrap" class="d1">
+
+				<form action="#" method="#" id="contact_form" class="contact_form">
+
+					<h1>業主您好,歡迎加入我們!</h1>
+
+					<span class="mark">業主資料</span>
+					<fieldset class="form">
+						<div class="form-group">
+							<label for="contactName">
+								<div>姓名:</div> <span><input type="text" name="contactName"
+									id="contactName" placeholder="請輸入姓名" maxlength="10"></span>
+							</label>
+						</div>
+
+						<div class="form-group">
+							<label for="contactPhone">
+								<div>連絡電話</div> <span><input type="text"
+									name="contactPhone" id="contactPhone" maxlength="10"
+									placeholder="請輸入手機或含區碼市話"></span>
+							</label>
+						</div>
+
+						<div class="form-group">
+							<label for="contactEmail">
+								<div>Email:</div> <span><input type="email"
+									name="contactEmail" id="contactEmail" maxlength="50"
+									placeholder="請輸入常用電子信箱,通知信將發送至此信箱"></span>
+							</label>
+						</div>
+						<div class="form-group">
+							<label for="corpPassword">
+								<div>密碼:</div> <span><input type="password"
+									name="corpPassword" id="corpPassword"
+									placeholder="請輸入8-20字大小寫字母與數字混合之密碼" maxlength="20"></span>
+							</label>
+						</div>
+						<div class="form-group">
+							<label for="re_password">
+								<div>密碼確認:</div> <span><input type="password"
+									name="re_password" id="re_password" placeholder="請再次輸入密碼"></span>
+							</label>
+						</div>
+						<br> <span class="mark">收容所資料</span>
+						<div class="form-group">
+							<label for="corpName">
+								<div>法人名稱:</div> <span><input type="text"
+									name="corpName" id="corpName" maxlength="20"
+									placeholder="請輸入收容所登記之法人名稱"></span>
+							</label>
+						</div>
+						<div class="form-group">
+							<label for="corpAccount">
+								<div>統一編號:</div> <span><input type="text"
+									name="corpAccount" id="corpAccount" maxlength="8"
+									placeholder="統編將作為日後登入之帳號"></span>
+							</label>
+						</div>
+						<div class="form-group">
+							<label for="corpRegisteredId">
+								<div>法人登記案號:</div> <span><input type="text"
+									name="corpRegisteredId" id="corpRegisteredId" maxlength="50"
+									placeholder="請填入收容所之法人登記案號"></span>
+						</div>
+						<div class="form-group">
+							<label for="corpAddress">
+								<div>收容所地址:</div> <span><input type="text"
+									name="corpAddress" id="corpAddress" maxlength="100"
+									placeholder="請輸入收容所的地址"></span>
+							</label>
+						</div>
+						
+
+						<button type="submit" class="btn_set">Sign Up</button>
+					</fieldset>
+
+				</form>
+
+			</div>
+		</div>
+	</main>
+	<footer class="text-center">
+		<div class="container text-muted py-4 py-lg-5">
+			<ul class="list-inline">
+				<li class="list-inline-item me-4"><a class="link-secondary"
+					href="#">Web design</a></li>
+				<li class="list-inline-item me-4"><a class="link-secondary"
+					href="#">Development</a></li>
+				<li class="list-inline-item"><a class="link-secondary" href="#">Hosting</a></li>
+			</ul>
+			<ul class="list-inline">
+				<li class="list-inline-item me-4"><svg
+						xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+						fill="currentColor" viewBox="0 0 16 16" class="bi bi-facebook"
+						style="border-color: #fd780f; color: #fd780f;">
+                        <path
+							d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z">
+                        </path>
+                    </svg></li>
+				<li class="list-inline-item me-4"><svg
+						xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+						fill="currentColor" viewBox="0 0 16 16" class="bi bi-twitter"
+						style="color: #fd780f;">
+                        <path
+							d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z">
+                        </path>
+                    </svg></li>
+				<li class="list-inline-item"><svg
+						xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+						fill="currentColor" viewBox="0 0 16 16" class="bi bi-instagram"
+						style="border-color: #fd780f; color: #fd780f;">
+                        <path
+							d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z">
+                        </path>
+                    </svg></li>
+			</ul>
+			<p class="mb-0">Copyright © 2023 Brand</p>
+		</div>
+	</footer>
+
+</body>
+<!-- jquery -->
+<script src="./jquery/jquery3.6.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="../index/js/index.js"></script>
+<script src="../assets/js/login.js"></script>
+<!-- cart icon -->
+<script src="/shopping/pd_page/assets/js/cartIcon.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+	integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+	crossorigin="anonymous"></script>
+
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/bootstrapvalidator.min.js"></script>
+<!-- 取用js存的函式 -->
+<script src="js/formCheck.js"></script>
+<script src="./sweetalert2/cdn"></script>
+
+<script>
+
+$(function(){
+	
+	let allData = {};
+	
+        $('#contact_form').bootstrapValidator({//初始化驗證功能
+            // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+            	contactName: {
+                    validators: {
+                        stringLength: {
+                            min: 2,
+                            message: '請填入姓氏與姓名至少二字元'
+                        },
+                        notEmpty: {
+                            message: '此欄位不得空白'
+                        },
+                        regexp: {
+                            regexp: /^[\u4E00-\u9FFFㄅ-ㄩㄚ-ㄦA-Za-z\s]+$/,
+                            message: '此欄位不得有符號及數字或使用空格區隔'
+                        }
+                    },
+                },
+                contactPhone: {
+                    validators: {
+                        notEmpty: {
+                            message: '此欄位不得空白'
+                        },
+                        regexp: {
+                            regexp: /^(0[1-9][0-9]{8}|(02|03[2-9]|04[1-9]|05[2-9]|06[2-9]|07[2-9]|08[2-9]|09[1-8]|037|049|082|089|0826|0829|0836|0839|0896|0899)\d{6,8})$/,
+                            message: '長度不符'
+                        }
+                    },
+                },
+                contactEmail: {
+                    validators: {
+                        notEmpty: {
+                            message: '此欄位不得空白'
+                        },
+                        emailAddress: {
+                            message: '請輸入有效的信箱'
+                        }
+                    }
+
+                },
+
+                corpName: {
+                    validators: {
+                        stringLength: {
+                            min: 1,
+                            message: '此欄位不得空白'
+                        },
+                        notEmpty: {
+                            message: '此欄位不得空白'
+                        }
+                    }
+                },
+                corpAccount: {
+                    validators: {
+                        stringLength: {
+                            min: 8,
+                            message: '長度不合法,請確認'
+                        },
+                        notEmpty: {
+                            message: '此欄位不得空白'
+                        }
+                    }
+                },
+                corpAddress: {
+                    validators: {
+                        stringLength: {
+                            min: 1,
+                            message: ' '
+                        },
+                        notEmpty: {
+                            message: '此欄位不得空白'
+                        },
+                        regexp: {
+                            regexp: /^[\u4E00-\u9FFF0-9\u3105-\u3129\-]+$/,
+                            message: '地址格式不正確，僅能包含中文、數字和（-）符號'
+                        }
+                    }
+                },
+                corpPassword: {
+                    validators: {
+                        notEmpty: {
+                            message: '此欄位不得空白'
+                        },
+                        stringLength: {
+                            min: 8,
+                            max: 20,
+                            message: '密碼長度度需介於8到20個字元,僅能大小寫字母及數字'
+                        },
+                        regexp: {
+                            regexp: /^[a-zA-Z0-9]+$/,
+                            message: '密碼含有不合格式字元,請重新輸入'
+                        },
+                    }
+                },
+                re_password: {
+                    validators: {
+                        notEmpty: {
+                            message: '此欄位不得空白'
+                        },
+                        identical: {
+                            field: 'corpPassword',
+                            message: '與前次密碼不相符'
+                        },
+                        regexp: {
+                            regexp: /^[a-zA-Z0-9]+$/,
+                            message: '有不合格式字元'
+                        }
+                    }
+                },
+                corpRegisteredId: {
+                    validators: {
+                        notEmpty: {
+                            message: '此欄位不得空白'
+                        },
+                        regexp: {
+                            regexp: /^[\u4E00-\u9FFF0-9]+$/,
+                            message: '請確認輸入案號'
+                        },
+                        stringLength: {
+                            min: 5,
+                            message: "請填入含有中文及數字組成之案號"
+                        }
+                    }
+
+                },
+            },
+
+        });
+
+			$(".btn_set").click(function(e) {
+				e.preventDefault();
+	  			// 檢查表單驗證結果	
+  			Swal.fire({
+    			text: "即將送出表單",
+    			allowOutsideClick: false,
+    			showCancelButton: true,
+    			confirmButtonText: '確定',
+    			cancelButtonText: '取消'
+  			}).then((result) => {
+    			if (result.isConfirmed) {
+      			for (const key in allData) {
+       			// 如果為null或空字串
+       				if (!allData[key]) {
+          				isDataValid = false;
+          				Swal.fire({
+            				allowOutsideClick: false,
+            				icon: 'error',
+            				title: '資料未填齊全或格式錯誤',
+           					text: '請再次確認～'
+          				});
+          				break; // 有一個是空就退出循環
+        			}else{
+        	   		Swal.fire({
+        	          		confirmButtonText: '確定',
+        	          		title: '歡迎您的加入'
+        	        		}).then((result) => {
+        	        			if (result.isConfirmed) {
+        	        				redirectToIndex();
+        	        		}
+        	        	});
+        	     	}
+        		}
+      		}
+    	
+  	});
+
+          try {
+        	  //正則化驗證名字
+        	  const contactName = $('#contactName').val();
+        	  const nameRegex = /^[\u4E00-\u9FFFㄅ-ㄩㄚ-ㄦA-Za-z\s]{2,50}$/; 	  
+        	  if (!nameRegex.test(contactName)) {
+        	    Swal.fire({
+        	      allowOutsideClick: false,
+        	      icon: 'error',
+        	      title: '資料格式錯誤或有欄位填寫不全',
+        	    });
+        	    return; //只要驗證不通過就阻止後續程式執行,不然資料就進後端了
+        	  }
+        	  
+        	//正則化驗證電話
+        	const contactPhone = $('#contactPhone').val();
+        	const phoneRegex = /^(0[1-9][0-9]{8}|(02|03[2-9]|04[1-9]|05[2-9]|06[2-9]|07[2-9]|08[2-9]|09[1-8]|037|049|082|089|0826|0829|0836|0839|0896|0899)\d{6,8})$/;
+        	if (!phoneRegex.test(contactPhone)) {
+        	    Swal.fire({
+        	      allowOutsideClick: false,
+        	      icon: 'error',
+        	      title: '連絡電話格式有誤哦',
+        	    });
+        	    return; //只要驗證不通過就阻止後續程式執行,不然資料就進後端了
+        	  }
+        	
+        	//正則化驗證統一編號
+        	const corpAccount = $('#corpAccount').val();
+        	const accountRegex = /^\d{8,}$/;
+        	if (!accountRegex.test(corpAccount)) {
+        	    Swal.fire({
+        	      allowOutsideClick: false,
+        	      icon: 'error',
+        	      title: '資料格式錯誤或有欄位填寫不全',
+        	    });
+        	    return; //只要驗證不通過就阻止後續程式執行,不然資料就進後端了
+        	  }
+        	//正則化驗證地址
+        	const corpAddress = $('#corpAddress').val();
+        	const addressRegex = /^[\u4E00-\u9FFF0-9\u3105-\u3129\-]+$/;
+        	if (!addressRegex.test(corpAddress)) {
+        	    Swal.fire({
+        	      allowOutsideClick: false,
+        	      icon: 'error',
+        	      title: '資料格式錯誤或有欄位填寫不全',
+        	    });
+        	    return; //只要驗證不通過就阻止後續程式執行,不然資料就進後端了
+        	  }
+        	const corpRegisteredId = $('#corpRegisteredId').val();
+        	const corpRegisteredIdRegex =/^[\u4E00-\u9FFF0-9]+$/;
+        	if (!corpRegisteredIdRegex.test(corpRegisteredId)) {
+        	    Swal.fire({
+        	      allowOutsideClick: false,
+        	      icon: 'error',
+        	      title: '資料格式錯誤或有欄位填寫不全',
+        	    });
+        	    return; //只要驗證不通過就阻止後續程式執行,不然資料就進後端了
+        	  }
+        	//正則化驗證密碼
+        	const corpPassword = $('#corpPassword').val();
+        	const passwordRegex =/^[a-zA-Z0-9]{8,}$/;
+        	if (!passwordRegex.test(corpPassword)) {
+        	    Swal.fire({
+        	      allowOutsideClick: false,
+        	      icon: 'error',
+        	      title: '資料格式錯誤或有欄位填寫不全',
+        	    });
+        	    return; //只要驗證不通過就阻止後續程式執行,不然資料就進後端了
+        	  }
+        	//正則化驗證信箱 
+        	const contactEmail = $('#contactEmail').val();
+        	const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        	if (!emailRegex.test(contactEmail)) {
+        	  Swal.fire({
+        	    allowOutsideClick: false,
+        	    icon: 'error',
+        	    title: '信箱格式錯誤',
+        	  });
+        	  return;
+        	}
+          
+        	  allData = {
+        			  
+        	  contactName: contactName,
+        	  contactPhone: contactPhone,
+        	  contactEmail: contactEmail,
+        	  corpPassword: corpPassword,
+        	  corpRegisteredId: corpRegisteredId,
+        	  corpName: $('#corpName').val(),
+        	  corpAccount: corpAccount,
+        	  corpAddress: corpAddress,
+              
+            };
+
+
+            $.ajax({
+              type: "POST",
+              url: "/animalCorporation/apply",
+              contentType: "application/json",
+              data: JSON.stringify(allData),
+              success: function(res) {
+              },
+            });
+          } catch (err) {
+            console.log('新增失敗', err);
+           
+          }
+        });
+
+});
+
+
+    
+
+
+</script>
+
+</html>

@@ -1,0 +1,23 @@
+h2 {
+    margin-bottom: 24px;
+}
+
+button.view_order {
+    border: 1px solid lightslategray;
+    border-radius: 7px;
+    background-color: #f9ecdb;
+}
+
+button.view_order:hover {
+    border: 1px solid lightslategray;
+    border-radius: 7px;
+    background-color: #ffe7dd;
+}
+
+button.delete_order {
+    border-radius: 7px;
+}
+
+td.view_order_work, td.delete_order {
+    text-align: center;
+}

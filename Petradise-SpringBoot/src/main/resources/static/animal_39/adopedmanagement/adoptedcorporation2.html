@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<title>Table - Brand</title>
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
+<link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+<link rel="stylesheet" href="assets/css/custom.css">
+<link rel="stylesheet" href="assets/css/Ludens---3-Edit-Dark-mode.css">
+<link rel="stylesheet"
+	href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+<!-- jquery  -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<!-- datatable  css-->
+<link rel="stylesheet"
+	href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
+<!-- datatable js -->
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+
+</head>
+
+<body id=" page-top">
+	<div id="wrapper">
+		<nav
+			class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0"
+			style="background: #f1ecd1;">
+			<div class="container-fluid d-flex flex-column p-0">
+				<a
+					class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0"
+					href="#">
+					<div class="sidebar-brand-text mx-3">
+						<img width="59" height="33" src="assets/img/avatars/logo-only.png">
+					</div>
+				</a>
+				<hr class="sidebar-divider my-0">
+				<ul class="navbar-nav">
+					<li class="nav-item dropdown show"><a
+						class="dropdown-toggle nav-link" aria-expanded="true"
+						data-bs-toggle="dropdown" data-bs-auto-close="false" href="#"
+						style="color: #a67c52; padding: 5px 16px; font-weight: bold; font-size: 14px;">收容所帳號管理</a>
+						<div class="dropdown-menu show" data-bs-popper="none"
+							style="background: rgba(255, 255, 255, 0); border-style: none; padding: 0px; margin: 0px; margin-bottom: 5px;">
+							<a class="dropdown-item" href="#"
+								style="padding: 2px 30px; font-size: 13px;">收容檔案</a> <a
+								class="dropdown-item" href="#"
+								style="padding: 2px 30px; font-size: 13px;"></a> <a
+								class="dropdown-item" href="#"
+								style="padding: 2px 30px; font-size: 13px;"></a>
+							<div class="dropdown-divider"
+								style="border-color: rgb(255, 255, 255);"></div>
+						</div></li>
+					<li class="nav-item dropdown show"><a
+						class="dropdown-toggle nav-link" aria-expanded="true"
+						data-bs-toggle="dropdown" data-bs-auto-close="false" href="#"
+						style="color: #a67c52; padding: 5px 16px; font-weight: bold; font-size: 14px;">流浪動物資訊</a>
+						<div class="dropdown-menu show" data-bs-popper="none"
+							style="background: rgba(255, 255, 255, 0); border-style: none; padding: 0px; margin: 0px; margin-bottom: 5px;">
+							<a class="dropdown-item" href="#"
+								style="padding: 2px 30px; font-size: 13px;">新增動物</a><a
+								class="dropdown-item" href="#"
+								style="padding: 2px 30px; font-size: 13px;"></a>
+						</div></li>
+					<li class="nav-item dropdown show"><a
+						class="dropdown-toggle nav-link" aria-expanded="true"
+						data-bs-toggle="dropdown" data-bs-auto-close="false" href="#"
+						style="color: #a67c52; padding: 5px 16px; font-weight: bold; font-size: 14px;">領養管理</a>
+						<div class="dropdown-menu show" data-bs-popper="none"
+							style="background: rgba(255, 255, 255, 0); border-style: none; padding: 0px; margin: 0px; margin-bottom: 5px;">
+							<a class="dropdown-item" href="#"
+								style="padding: 2px 30px; font-size: 13px;"></a><a
+								class="dropdown-item" href="#"
+								style="padding: 2px 30px; font-size: 13px;"></a><a
+								class="dropdown-item" href="#"
+								style="padding: 2px 30px; font-size: 13px;">認養</a><a
+								class="dropdown-item" href="#"
+								style="padding: 2px 30px; font-size: 13px;"></a><a
+								class="dropdown-item" href="#"
+								style="padding: 2px 30px; font-size: 13px;"></a>
+							<div class="dropdown-divider"
+								style="border-color: rgb(255, 255, 255);"></div>
+						</div></li>
+					<!-- <li class="nav-item dropdown show"><a class="dropdown-toggle nav-link" aria-expanded="true"
+                            data-bs-toggle="dropdown" data-bs-auto-close="false" href="#"
+                            style="color: #a67c52;padding: 5px 16px;font-weight: bold;font-size: 14px;">即時聊天管理</a>
+                        <div class="dropdown-menu show" data-bs-popper="none"
+                            style="background: rgba(255,255,255,0);border-style: none;padding: 0px;margin: 0px;margin-bottom: 5px;">
+                            <a class="dropdown-item" href="#" style="padding: 2px 30px;font-size: 13px;">客服列表</a>
+                            <div class="dropdown-divider" style="border-color: rgb(255,255,255);"></div>
+                        </div> -->
+					</li>
+				</ul>
+				<div class="text-center d-none d-md-inline">
+					<button class="btn rounded-circle border-0" id="sidebarToggle"
+						type="button"></button>
+				</div>
+			</div>
+		</nav>
+		<div class="d-flex flex-column" id="content-wrapper">
+			<div id="content">
+				<nav
+					class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+					<div class="container-fluid">
+						<button class="btn btn-link d-md-none rounded-circle me-3"
+							id="sidebarToggleTop" type="button">
+							<i class="fas fa-bars"></i>
+						</button>
+						<ul class="navbar-nav flex-nowrap ms-auto">
+							<li class="nav-item dropdown no-arrow">
+								<div class="nav-item dropdown no-arrow">
+									<a class="dropdown-toggle nav-link" aria-expanded="false"
+										data-bs-toggle="dropdown" href="#"><span
+										class="d-none d-lg-inline me-2 text-gray-600 small">Valerie
+											Luna</span><img class="border rounded-circle img-profile"
+										src="assets/img/avatars/avatar1.jpeg"></a>
+									<div
+										class="dropdown-menu shadow dropdown-menu-end animated--grow-in"
+										style="min-width: 110px;">
+										<a class="dropdown-item" href="#"><i
+											class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Logout</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				</nav>
+				<div class="container-fluid">
+					<h3 class="text-dark mb-4">業主資訊</h3>
+					<div class="card shadow">
+						<div class="card-header py-3">
+							<!-- Button -->
+							<button type="button" class="btn btn-primary"
+								data-bs-toggle="modal" data-bs-target="#exampleModal"
+								data-bs-whatever="@mdo">業主新增</button>
+							<div class="modal fade" id="exampleModal" tabindex="-1"
+								aria-labelledby="exampleModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h1 class="modal-title fs-5" id="exampleModalLabel">認養資料新增
+											</h1>
+											<button type="button" class="btn-close"
+												data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<form>
+												<div class="input-group-sm mb-3">
+													<label for="member" class="col-form-label">會員編號:</label> <input
+														type="text" class="form-control" id="member">
+												</div>
+												<div class="input-group-sm mb-3">
+													<label for="animalId" class="col-form-label">動物編號:</label>
+													<input type="text" class="form-control" id="animalId">
+												</div>
+												<div class="input-group-sm mb-3">
+													<label for="memid" class="col-form-label">身分證:</label> <input
+														type="text" class="form-control" id="memid">
+												</div>
+												<div class="input-group-sm mb-3">
+													<label for="name" class="col-form-label">姓名:</label> <input
+														type="text" class="form-control" id="name">
+												</div>
+												<div class="input-group-sm mb-3">
+													<label for="address" class="col-form-label">地址:</label> <input
+														type="text" class="form-control" id="address">
+												</div>
+												<div class="input-group-sm mb-3">
+													<label for="phone" class="col-form-label">電話:</label> <input
+														type="text" class="form-control" id="phone">
+												</div>
+												<div class="input-group-sm mb-3">
+													<label for="email" class="col-form-label">信箱:</label> <input
+														type="text" class="form-control" id="email">
+												</div>
+												<div class="input-group-sm mb-3">
+													<label for="occupation" class="col-form-label">職業:</label>
+													<input type="text" class="form-control" id="occupation">
+												</div>
+												<div class="input-group-sm mb-3">
+													<label for="status" class="col-form-label">狀態:</label> <input
+														type="text" class="form-control" id="status">
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-secondary"
+														data-bs-dismiss="modal">取消</button>
+													<button type="button" class="btn btn-primary">新增</button>
+												</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+
+
+
+
+
+						</div>
+						<div class="controll-content activity-order-controll-content">
+							<table id="all" class="display" style="width: 100%">
+								<thead>
+									<tr>
+									 <!--<th>編號</th>-->
+										<th>狀態</th>
+										<th>帳號</th>
+										<th>密碼</th>
+										<th>法人名稱</th>
+										<th>法人案號</th>
+										<th>地址</th>
+										<th>名字</th>
+										<th>電話</th>
+										<th>信箱</th>
+										<th>權限</th>
+										<th>查詢</th>
+										<th>修改</th>
+									</tr>
+								
+
+								</thead>
+								<!-- <tbody id="tbody">
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                        <th>0</th>
+                                        <td class="align-middle"><button type="button" class="btn btn-dark"
+                                                data-bs-toggle="modal" data-bs-target="#staticUpdate">
+                                                查詢
+                                            </button>
+                                        </td>
+                                        <td class="align-middle"><button type="button" class="btn btn-dark"
+                                                data-bs-toggle="modal" data-bs-target="#staticUpdate">
+                                                修改
+                                            </button>
+                                        </td>>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                        <td>0</td>
+                                        <td>896</td>
+                                        <td>896</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                        <td>0</td>
+                                        <td>896</td>
+                                        <td>896</td>
+                                    </tr>
+
+                                </tbody>
+                            </table> -->
+
+
+								<!---------------------------------主體結束-------------------------------->
+								</div>
+								</div>
+								</div>
+								</div>
+								</div>
+								</div>
+
+
+
+
+
+								<!-- <div class="row">
+                    <div class="col-md-6 align-self-center">
+                        <p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">
+                            Showing 1 to 10 of 27</p>
+                    </div>
+                    <div class="col-md-6">
+                        <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
+                            <ul class="pagination">
+                                <li class="page-item disabled"><a class="page-link" aria-label="Previous" href="#"><span
+                                            aria-hidden="true">«</span></a></li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" aria-label="Next" href="#"><span
+                                            aria-hidden="true">»</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div> -->
+
+
+								<!-- <footer class="bg-white sticky-footer">
+        <div class="container my-auto">
+            <div class="text-center my-auto copyright"><span>Copyright © Brand 2023</span></div>
+        </div>
+    </footer>
+    </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div> -->
+
+
+								<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+								<script src="assets/js/theme.js"></script>
+								<script
+									src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+								<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+								<script
+									src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+								<script
+									src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+								<!-- 引入bootstrap CDN -->
+								<script
+									src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+									integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+									crossorigin="anonymous"></script>
+
+								<!-- 新引入的JS檔案或套件請由此往下放 -->
+								<script src="./assets/js/Promotionedit.js"></script>
+								<script>
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+    </script>
+
+								<script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
+
+								<!-- JS -->
+								<script
+									src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+									integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+									crossorigin="anonymous"></script>
+								<script
+									src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"
+									integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ"
+									crossorigin="anonymous"></script>
+								<script>
+            (() => {
+                const tbody = document.querySelector('#tbody');
+
+
+                // ===============================VVV方法區VVV====================================
+
+                // ============================1.查資料回來getAllPromotion() 拿到字串和筆數========================
+                let dataaccount = 0;
+                let AnimalCorporation = [];
+
+                function getAllAnimalCorporation() {
+                    console.log('進入getAllAnimalCorporation()')
+                    fetch("/animalcorporation/all")
+                        .then(function (response) {
+                            // 檢查 API 响應的狀態碼
+                            if (response.status !== 200) {
+                                console.log('發生錯誤，狀態碼：' + response.status);
+                                return;
+                            }
+
+                            // 解析 JSON 格式的數據
+                            response.json().then(function (data) {
+                                // 在此處可以處理從 API 獲取的數據
+                                AnimalCorporation = data;
+                                console.log('獲取業主資訊：', AnimalCorporation);
+
+
+                                for (let i = 0; i < AnimalCorporation.length; i++) {
+                                    dataaccount = i;
+                                    let row = AnimalCorporation[i];
+                                    const corpid  = row.corpid ;
+                                    const appliedStatus = row.appliedStatus;
+                                    const corpAccount = row.corpAccount;
+                                    const corpPassword = row.corpPassword;
+                                    const corpName = row.corpName;
+                                    const corpRegisteredId = row.corpRegisteredId;
+                                    const corpAddress = row.corpAddress;
+                                    //const contactName = row.contactName;
+                                    const contactphone = row.contactphone;
+                                    const contactEmail = row.contactEmail;
+                                    const corpAccess = row.corpAccess;
+                                    dataTable.row.add([
+                                        row.corpid ,
+                                        row.appliedStatus,
+                                        row.corpAccount,
+                                        row.corpPassword,
+                                        row.corpName,
+                                        row.corpRegisteredId,
+                                        row.corpAddress,
+                                        row.contactName,
+                                        row.contactphone,
+                                        //row.contactEmail,
+                                        row.corpAccess,
+                                        `<button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal${i}" data-bs-whatever="@mdo" id="editbutton${i}">修改
+            </button>`,
+                                        `<button type="button" class="btn btn-primary">查詢</button>`
+
+                                    ]);
+                                }
+                                dataTable.draw();
+                            });
+                        })
+                        .catch(function (err) {
+                            console.log('錯誤：', err);
+                        });
+                }
+
+
+                // ============================2.  初始化datatable函式========================
+
+                let dataTable = $('#all').DataTable({
+                    scrollY: '600px',
+                    scrollCollapse: true,
+                    paging: false,
+                    pageLength: 10,
+                    info: false,
+                    destroy: true,
+                });
+
+
+                // ============================３. 修改資料進去 editmemberdata()========================
+
+
+
+
+                // ===============================^^^方法區^^^====================================
+
+                // ===============================VVV使用方法區VVV================================
+
+                //=================================1. 總之先查一次=================================
+                getAllAnimalCorporation();
+
+            })();
+    </script>
+</body>
+
+</html>

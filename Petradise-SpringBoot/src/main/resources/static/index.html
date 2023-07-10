@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>PETRADISE</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+  <link rel="stylesheet" href="assets/css/styles.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="shortcut icon" href="/assets/img/fav_icon.png" type="image/x-icon">
+</head>
+
+<body>
+<nav class="navbar navbar-light navbar-expand-md py-3" data-aos="zoom-in" data-aos-duration="1500">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="/index.html" style="position: sticky;top: 0;">
+        <img width="75" height="41" src="/assets/img/logo-only.png">
+      </a>
+
+      <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-3"
+        style="border-color: rgb(241,236,209);">
+        <span class="visually-hidden">Toggle navigation</span>
+        <span class="navbar-toggler-icon"
+          style="--bs-primary: #fd780f;--bs-primary-rgb: 253,120,15;--bs-secondary: #e69609;--bs-secondary-rgb: 230,150,9;color: rgb(241,236,209);">
+        </span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navcol-3" style="background: #ffffff;">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item dropdown" style="width: 100px;margin: 0px 0px 0px 10px">
+            <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown"
+              data-bs-auto-close="outside" href="/index.html" style="margin: 10px 0px 0px;">關於我們</a>
+            <div class="dropdown-menu" style="min-width: 110px;margin: 1px 0px 0px;border: 0px none rgba(33,37,41,0);">
+              <div class="dropdown-divider"
+                style="color: rgba(33,37,41,0);margin: 4px 0px;border-color: rgb(241,236,209);">
+              </div>
+              <a class="dropdown-item" href="/index.html#news-contain" style="font-size: 14px;">最新消息</a>
+              <a class="dropdown-item" href="/index.html#aboutMe-contain" style="font-size: 14px;">關於我們</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown" style="width: 100px;margin: 0px 0px 0px 10px">
+            <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown"
+              data-bs-auto-close="outside" href="#" style="margin: 10px 0px 0px;">毛孩旅館</a>
+            <div class="dropdown-menu" style="min-width: 110px;margin: 1px 0px 0px;border: 0px none rgba(33,37,41,0);">
+
+              <div class="dropdown-divider" style="color: rgba(33,37,41,0);margin: 4px 0px;border-color: rgb(241,236,209);">
+              </div>
+              <a class="dropdown-item" href="/hotel/searchHotel.html" style="font-size: 14px">預約訂房</a>
+                <a class="dropdown-item join-hotelowner" href="/owner/SignUp.html" style="font-size: 14px;color: #fd780f;">加入我們</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown" style="width: 100px;margin: 0px 0px 0px 10px">
+            <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown"
+              data-bs-auto-close="outside" href="#" style="margin: 10px 0px 0px;">浪浪收容</a>
+            <div class="dropdown-menu" style="min-width: 110px;margin: 1px 0px 0px;border: 0px none rgba(33,37,41,0);">
+              <div class="dropdown-divider"
+                style="color: rgba(33,37,41,0);margin: 4px 0px;border-color: rgb(241,236,209);">
+              </div>
+              <a class="dropdown-item" href="/animal_39/Frontanimal/animalbrowse.html" style="font-size: 14px">浪浪認養</a>
+              <a class="dropdown-item lostPet" href="/lostPet/lost.html" style="font-size: 14px">遺失協尋</a>
+              <a class="dropdown-item" href="/animalCorporation/signup.html" style="font-size: 14px">加入我們</a>
+            </div>
+          </li>
+
+          <li class="nav-item" style="height: 50px;width: 100px;margin: 0px 0px 0px 10px">
+            <a class="nav-link" href="/front-product-list/front-product-list.html" style="width: 100px;margin: 10px 0px 0px;">寵物商城</a>
+          </li>
+
+<!--          <li class="nav-item dropdown" style="width: 100px;margin: 0px 0px 0px 10px">-->
+<!--            <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown"-->
+<!--              data-bs-auto-close="outside" href="#" style="margin: 10px 0px 0px;" target="_parent">客服中心</a>-->
+<!--            <div class="dropdown-menu" style="min-width: 110px;margin: 1px 0px 0px;border: 0px none rgba(33,37,41,0);">-->
+<!--              <div class="dropdown-divider" style="color: rgba(33,37,41,0);margin: 4px 0px;border-color: rgb(241,236,209);">-->
+<!--              </div>-->
+<!--              <a class="dropdown-item" href="#" style="font-size: 14px">常見問題</a>-->
+<!--              <a class="dropdown-item" href="#" style="font-size: 14px">服務認證</a>-->
+<!--              <a class="dropdown-item" href="#" style="font-size: 14px">聯絡我們</a>-->
+<!--            </div>-->
+<!--          </li>-->
+
+        </ul>
+
+        <!-- Shopping Cart -->
+        <div class="btn btn-primary cart" style="cursor: pointer;margin-top: 10px;margin-right: 10px;border-style: none;background: rgb(255,255,255);color: #fd780f;height: 38px;width: 100px;">
+            <span class="fas fa-shopping-cart"
+                  style="margin: 9px 5px 0px -12px;padding: 0px;font-size: 24px;color: #fd780f;height: 26px;width: 26px;margin-top: 0px;margin-right: 3px;margin-bottom: 3px;margin-left: 3px;">
+            </span>
+          <span class="shopping-cart-total"></span>
+        </div>
+
+        <!-- Member -->
+        <div class="btn-group" style="margin: 10px 0px 0px;">
+            <a class="btn btn-primary" type="button" style="height: 38px;width: 90px;background: #fd780f;border-color: rgb(255, 255, 255);padding-top: 6px">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16"
+                  class="bi bi-person-circle" style="margin: 0px 3px 3px;padding: 0px;font-size: 26px;">
+                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
+                  <path fill-rule="evenodd"
+                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z">
+                  </path>
+                </svg>會員
+            </a>
+            <button class="btn btn-primary dropdown-toggle dropdown-toggle-split"
+            data-bs-toggle="dropdown" aria-expanded="false" type="button"
+            style="background: #fd780f;border-color: rgb(255, 255, 255);width: 29.5833px;"></button>
+            <div class="dropdown-menu" style="min-width: 118px;background: #fd780f;margin: 1px 0px 0px;">
+               <a class="dropdown-item navigate-signin" href="#" style="color: #ffffff;">登入/註冊</a>
+               <a class="dropdown-item navigate-member-center" href="#" style="color: #ffffff;">會員中心</a>
+               <a class="dropdown-item logout" style="color: #ffffff;">登出</a>
+            </div>
+        </div>
+
+      </div>
+
+    </div>
+</nav>
+
+
+  <!-- Carousel -->
+  <div class="carousel slide" data-bs-ride="carousel" id="carousel-1" style="height: 495px;">
+
+    <div class="carousel-inner h-100">
+      <div class="carousel-item active h-100" data-bs-interval="4000"><img class="w-100 d-block position-absolute h-100 fit-cover"
+          src="assets/img/jamie-street-s9Tf1eBDFqw-unsplash%20(1).jpg" alt="Slide Image"
+          style="z-index: -1;filter: brightness(80%);">
+        <div class="container d-flex flex-column justify-content-center h-100">
+          <div class="row">
+            <div class="col-md-6 col-xl-3 offset-md-2">
+              <div style="max-width: 350px;">
+                <h1 class="text-uppercase fw-bold"
+                  style="color: #f1ecd1;text-shadow: 2px 2px 4px #fd780f;font-size: 36px;">
+                  <strong>舒適</strong>又<strong>安全</strong>，<br>乾淨又寬敞，<br>讓寶貝賓至如歸
+                </h1>
+                <p class="my-3" style="color: #f1ecd1;">透過我們，毛孩爸媽能夠輕鬆的挑選到舒適、安全且大空間的寵物旅館，安心的把寶貝們交給專人照顧。
+                  <br>
+                </p>
+                <a class="btn btn-primary btn-lg me-2" role="button" href="/hotel/searchHotel.html" style="background: #fd780f;border-color: #fd780f;">預約訂房</a>
+                <a class="btn btn-outline-primary btn-lg" role="button" href="/owner/SignUp.html" style="color: #fd780f;border-color: #fd780f;background: #ffffff;">加入我們</a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item h-100" data-bs-interval="4000"><img class="w-100 d-block position-absolute h-100 fit-cover"
+           src="assets/img/humberto-arellano-N_G2Sqdy9QY-unsplash.jpg" alt="Slide Image" style="z-index: -1;">
+        <div class="container d-flex flex-column justify-content-center h-100">
+            <div class="row">
+                <div class="col-md-6 col-xl-4 offset-md-2">
+                    <div style="max-width: 350px;">
+                        <h1 class="text-uppercase fw-bold"
+                            style="color: #fd780f;text-shadow: 2px 2px 4px #f1ecd1;font-size: 36px;">
+                            領養代替購買，<br>請讓牠們再次，<br>擁有被愛的幸福<br></h1>
+                        <p class="my-3" style="color: #574f36;">
+                            浪浪們只要稍加整理，再加上您的愛心照顧，也能變的可愛又貼心，您的生活也會因為牠們的陪伴變得更加美好、快樂！</p>
+                        <a class="btn btn-primary btn-lg me-2" role="button" href="/animal_39/Frontanimal/animalbrowse.html"
+                                style="background: #fd780f;border-color: #fd780f;">預約認養
+                          <br></a>
+                        <a class="btn btn-outline-primary btn-lg" role="button" href="/animalCorporation/signup.html"
+                            style="background: #ffffff;color: #fd780f;border-color: #fd780f;">加入我們</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="carousel-item h-100" data-bs-interval="4000"><img class="rounded w-100 d-block position-absolute h-100 fit-cover"
+          style="z-index: -1;" src="assets/img/animal-gd8400bf6c_1920.jpg">
+        <div class="container d-flex flex-column justify-content-center h-100">
+          <div class="row">
+            <div class="col-md-6 col-xl-4 offset-md-2" style="position: relative;">
+              <div style="max-width: 350px;">
+                <h1 class="text-uppercase fw-bold"
+                  style="color: #f1ecd1;text-shadow: 2px 2px 4px #fd780f;font-size: 36px;">
+                  物美又價廉，<br>豐富又齊全，<br>優質商品任您選，<br></h1>
+                <p class="my-3" style="color: #574f36;">秉持「物美價廉、誠信專業」的精神，提供寵物生活大小事的一切商品，體貼您與毛孩，讓我們成為您的首選！</p><a
+                  class="btn btn-primary btn-lg me-2" role="button" href="/front-product-list/front-product-list.html"
+                  style="background: #fd780f;border-color: #fd780f;">立即選購</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div>
+        <a class="carousel-control-prev" href="#carousel-1" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel-1" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+        </a>
+    </div>
+    <ol class="carousel-indicators">
+        <li data-bs-target="#carousel-1" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#carousel-1" data-bs-slide-to="1"></li>
+        <li data-bs-target="#carousel-1" data-bs-slide-to="2"></li>
+    </ol>
+
+  </div>
+
+
+  <!-- News -->
+<div id="news-contain"></div>
+  <div class="container py-4 py-xl-5" style="height: 420px;margin-top: 60px;margin-bottom: 10px;min-height: 610px">
+    <div class="row mb-5" style="margin-bottom: 60px;">
+        <div class="col-md-8 col-xl-6 text-center mx-auto">
+            <h2 style="color: #fd780f;text-shadow: 2px 2px 1px #f1ecd1;">最新消息</h2>
+        </div>
+    </div>
+    <div id="tableBody" class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3"
+         style="margin-top: -40px;margin-bottom: 10px;">
+
+<!--      <div class="col">-->
+<!--        <div class="d-flex">-->
+<!--          <div-->
+<!--            class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-3 bs-icon"-->
+<!--            style="background: #fd780f;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"-->
+<!--              fill="currentColor" viewBox="0 0 16 16" class="bi bi-bell-fill" style="font-size: 16px;">-->
+<!--              <path-->
+<!--                d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z">-->
+<!--              </path>-->
+<!--            </svg></div>-->
+<!--          <div class="px-3">-->
+<!--            <h4 style="color: #e69609;margin-bottom: 0px;">New Arrivals</h4>-->
+<!--            <p style="color: #a67c52;margin-bottom: 10px;">2020-01-01</p>-->
+<!--            <p style="color: #574f36;">Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum-->
+<!--              vulputate cras aenean.</p><a href="#" style="color: #f8c544;">Learn More&nbsp;<svg-->
+<!--                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16"-->
+<!--                class="bi bi-caret-right-fill">-->
+<!--                <path-->
+<!--                  d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z">-->
+<!--                </path>-->
+<!--              </svg></a>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+
+
+        <!--      <div class="col">-->
+        <!--        <div class="d-flex">-->
+        <!--          <div-->
+        <!--            class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-3 bs-icon"-->
+        <!--            style="background: #fd780f;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"-->
+        <!--              fill="currentColor" viewBox="0 0 16 16" class="bi bi-bell-fill" style="font-size: 16px;">-->
+        <!--              <path-->
+        <!--                d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z">-->
+        <!--              </path>-->
+        <!--            </svg></div>-->
+        <!--          <div class="px-3">-->
+        <!--            <h4 style="color: #e69609;margin-bottom: 0px;">Latest Top 10 hotels</h4>-->
+        <!--            <p style="color: #a67c52;margin-bottom: 10px;">2020-01-01</p>-->
+        <!--            <p style="color: #574f36;">Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum-->
+        <!--              vulputate cras aenean.</p><a href="#" style="color: #f8c544;">Learn More&nbsp;<svg-->
+        <!--                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16"-->
+        <!--                class="bi bi-caret-right-fill">-->
+        <!--                <path-->
+        <!--                  d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z">-->
+        <!--                </path>-->
+        <!--              </svg></a>-->
+        <!--          </div>-->
+        <!--        </div>-->
+        <!--      </div>-->
+
+
+        <!--      <div class="col">-->
+        <!--        <div class="d-flex">-->
+        <!--          <div-->
+        <!--            class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-3 bs-icon"-->
+        <!--            style="background: #fd780f;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"-->
+        <!--              fill="currentColor" viewBox="0 0 16 16" class="bi bi-bell-fill" style="font-size: 15px;">-->
+        <!--              <path-->
+        <!--                d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z">-->
+        <!--              </path>-->
+        <!--            </svg></div>-->
+        <!--          <div class="px-3">-->
+        <!--            <h4 style="color: #e69609;margin-bottom: 0px;">Season sales</h4>-->
+        <!--            <p style="color: #a67c52;margin-bottom: 10px;">2020-01-01</p>-->
+        <!--            <p style="color: #574f36;">Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum-->
+        <!--              vulputate cras aenean.</p><a href="#" style="color: #f8c544;">Learn More&nbsp;<svg-->
+        <!--                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16"-->
+        <!--                class="bi bi-caret-right-fill">-->
+        <!--                <path-->
+        <!--                  d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z">-->
+        <!--                </path>-->
+        <!--              </svg></a>-->
+        <!--          </div>-->
+        <!--        </div>-->
+        <!--      </div>-->
+
+
+<!--      <div class="col">-->
+<!--        <div class="d-flex">-->
+<!--          <div-->
+<!--            class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-3 bs-icon"-->
+<!--            style="background: #fd780f;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"-->
+<!--              fill="currentColor" viewBox="0 0 16 16" class="bi bi-bell-fill" style="font-size: 15px;">-->
+<!--              <path-->
+<!--                d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z">-->
+<!--              </path>-->
+<!--            </svg></div>-->
+<!--          <div class="px-3">-->
+<!--            <h4 style="color: #e69609;margin-bottom: 0px;">Season sales</h4>-->
+<!--            <p style="color: #a67c52;margin-bottom: 10px;">2020-01-01</p>-->
+<!--            <p style="color: #574f36;">Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum-->
+<!--              vulputate cras aenean.</p><a href="#" style="color: #f8c544;">Learn More&nbsp;<svg-->
+<!--                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16"-->
+<!--                class="bi bi-caret-right-fill">-->
+<!--                <path-->
+<!--                  d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z">-->
+<!--                </path>-->
+<!--              </svg></a>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+
+
+<!--      <div class="col">-->
+<!--        <div class="d-flex">-->
+<!--          <div-->
+<!--            class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-3 bs-icon"-->
+<!--            style="background: #fd780f;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"-->
+<!--              fill="currentColor" viewBox="0 0 16 16" class="bi bi-bell-fill" style="font-size: 15px;">-->
+<!--              <path-->
+<!--                d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z">-->
+<!--              </path>-->
+<!--            </svg></div>-->
+<!--          <div class="px-3">-->
+<!--            <h4 style="color: #e69609;margin-bottom: 0px;">Season sales</h4>-->
+<!--            <p style="color: #a67c52;margin-bottom: 10px;">2020-01-01</p>-->
+<!--            <p style="color: #574f36;">Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum-->
+<!--              vulputate cras aenean.</p><a href="#" style="color: #f8c544;">Learn More&nbsp;<svg-->
+<!--                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16"-->
+<!--                class="bi bi-caret-right-fill">-->
+<!--                <path-->
+<!--                  d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z">-->
+<!--                </path>-->
+<!--              </svg></a>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+
+    </div>
+  </div>
+
+  <!-- About Me -->
+<div id="aboutMe-contain"></div>
+  <div class="container py-4 py-xl-5" style="margin-top: 60px">
+    <div class="row mb-5"
+         style="margin: 5px 0px 10px;margin-bottom: 10px;padding-bottom: 0px;height: 60px;margin-top: 0px;">
+        <div class="col-md-8 col-xl-6 text-center mx-auto">
+            <h2 style="text-shadow: 2px 2px 1px #f1ecd1;color: #fd780f;">孩樂在其中</h2>
+            <p class="w-lg-50" style="color: #574f36;">Anything, Anytime, Anywhere For Your Pets!</p>
+        </div>
+    </div>
+
+    <div class="row gy-4 row-cols-2 row-cols-md-4" style="margin-bottom: 22px;">
+
+      <div class="col">
+        <div class="text-center d-flex flex-column justify-content-center align-items-center py-3">
+          <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-2 bs-icon lg"
+            style="background: #fd780f;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-house-door-fill">
+              <path
+                d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z">
+              </path>
+            </svg>
+          </div>
+          <div class="px-3">
+            <h2 id="num1" class="fw-bold mb-0" style="color: #e69609;"></h2>
+            <p class="mb-0" style="color: #574f36;">合作旅館</p>
+          </div>
+          <div style="width: 255px;height: 150px;">
+            <p style="height: 145px;min-height: 145px;">
+              <br>輕鬆挑選到價格合宜又舒適的寵物旅館給寶貝們，讓家長能夠放心毛孩安全，更能安心外出，<br>找喜歡的住宿，過喜歡的假期<br>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="text-center d-flex flex-column justify-content-center align-items-center py-3">
+            <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-2 bs-icon lg"
+                    style="background: #fd780f;"><i class="fas fa-dog"></i>
+            </div>
+            <div class="px-3">
+                <h2 id="num2" class="fw-bold mb-0" style="color: #e69609;"></h2>
+                <p class="mb-0" style="color: #574f36;">收容業者</p>
+            </div>
+            <div style="width: 255px;height: 150px;">
+                <p style="height: 145px;min-height: 145px;"><br>被收容的浪浪需要您的關懷與照護，因為您的愛，他們能夠再次感受到來自家的溫暖，<br>美好的陪伴，幸福的延續<br>
+                </p>
+            </div>
+        </div>
+      </div>
+
+      <div class="col">
+         <div class="text-center d-flex flex-column justify-content-center align-items-center py-3">
+            <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-2 bs-icon lg"
+                 style="background: #fd780f;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                     fill="currentColor" viewBox="0 0 16 16" class="bi bi-chat-dots-fill" style="font-size: 40px;">
+                    <path
+                        d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z">
+                    </path>
+                </svg>
+            </div>
+            <div class="px-3">
+                <h2 id="num3" class="fw-bold mb-0" style="color: #e69609;"></h2>
+                <p class="mb-0" style="color: #574f36;">協尋貼文</p>
+            </div>
+            <div style="width: 255px;height: 150px;">
+                <p style="height: 145px;min-height: 145px;">
+                    <br>毛孩走失？我們的網站助您找回心肝寶貝！登記資訊、共享情報，讓每隻毛孩與主人能夠感人重逢，<br>彼此攜手，尋回愛寵<br>
+                </p>
+            </div>
+         </div>
+      </div>
+
+      <div class="col">
+         <div class="text-center d-flex flex-column justify-content-center align-items-center py-3">
+            <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-2 bs-icon lg"
+                    style="background: #fd780f;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -32 576 576" width="1em"
+                     height="1em"
+                     fill="currentColor">
+                    <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                    <path
+                            d="M171.7 191.1H404.3L322.7 35.07C316.6 23.31 321.2 8.821 332.9 2.706C344.7-3.409 359.2 1.167 365.3 12.93L458.4 191.1H544C561.7 191.1 576 206.3 576 223.1C576 241.7 561.7 255.1 544 255.1L492.1 463.5C484.1 492 459.4 512 430 512H145.1C116.6 512 91 492 83.88 463.5L32 255.1C14.33 255.1 0 241.7 0 223.1C0 206.3 14.33 191.1 32 191.1H117.6L210.7 12.93C216.8 1.167 231.3-3.409 243.1 2.706C254.8 8.821 259.4 23.31 253.3 35.07L171.7 191.1zM191.1 303.1C191.1 295.1 184.8 287.1 175.1 287.1C167.2 287.1 159.1 295.1 159.1 303.1V399.1C159.1 408.8 167.2 415.1 175.1 415.1C184.8 415.1 191.1 408.8 191.1 399.1V303.1zM271.1 303.1V399.1C271.1 408.8 279.2 415.1 287.1 415.1C296.8 415.1 304 408.8 304 399.1V303.1C304 295.1 296.8 287.1 287.1 287.1C279.2 287.1 271.1 295.1 271.1 303.1zM416 303.1C416 295.1 408.8 287.1 400 287.1C391.2 287.1 384 295.1 384 303.1V399.1C384 408.8 391.2 415.1 400 415.1C408.8 415.1 416 408.8 416 399.1V303.1z">
+                    </path>
+                </svg>
+            </div>
+            <div class="px-3">
+                <h2 id="num4" class="fw-bold mb-0" style="color: #e69609;"></h2>
+                <p class="mb-0" style="color: #574f36;">豐富商品</p>
+            </div>
+            <div style="width: 255px;height: 150px;">
+                <p style="height: 145px;min-height: 145px;">
+                    <br>寵物用品、口糧和玩具一應具全，快來探索寵物商城，滿足您與毛孩的一切所需，營造美好的回憶，<br>照顧眾愛寵，呵護每瞬間<br>
+                </p>
+            </div>
+         </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="text-center">
+    <div class="container text-muted py-4 py-lg-5">
+        <ul class="list-inline">
+            <li class="list-inline-item me-4"><a class="link-secondary" href="#" style="color: #f8c544;">Web design</a>
+            </li>
+            <li class="list-inline-item me-4"><a class="link-secondary" href="#">Development</a></li>
+            <li class="list-inline-item"><a class="link-secondary" href="#">Hosting</a></li>
+        </ul>
+        <ul class="list-inline">
+            <li class="list-inline-item me-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                     fill="currentColor" viewBox="0 0 16 16" class="bi bi-facebook"
+                     style="border-color: #fd780f;color: #fd780f;">
+                    <path
+                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z">
+                    </path>
+                </svg>
+            </li>
+            <li class="list-inline-item me-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                     fill="currentColor" viewBox="0 0 16 16" class="bi bi-twitter" style="color: #fd780f;">
+                    <path
+                            d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z">
+                    </path>
+                </svg>
+            </li>
+            <li class="list-inline-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                     fill="currentColor" viewBox="0 0 16 16" class="bi bi-instagram"
+                     style="border-color: #fd780f;color: #fd780f;">
+                    <path
+                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z">
+                    </path>
+                </svg>
+            </li>
+        </ul>
+        <p class="mb-0">Copyright © 2023 PETRADISE</p>
+    </div>
+  </footer>
+
+    <script src="vendors/jquery/jquery-3.6.4.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+    <script src="assets/js/news.js"></script>
+    <script src="assets/js/countUp.js"></script>
+    <!-- login -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="assets/js/login.js"></script>
+    <script src="./index/js/index.js"></script>
+    <!-- cart icon -->
+    <script src="/shopping/pd_page/assets/js/cartIcon.js"></script>
+
+</body>
+
+</html>

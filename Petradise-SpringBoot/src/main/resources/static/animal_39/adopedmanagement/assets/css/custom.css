@@ -1,0 +1,97 @@
+div.source {
+  border: 1px solid #000000;
+  margin-bottom: 364px;
+  margin-right: 15px;
+  margin-left: 12px;
+  margin-top: 23px;
+  padding-bottom: 672px;
+  padding-top: 0px;
+}
+
+div.but {
+  display: flex;
+  margin-bottom: 31px;
+  padding-bottom: 0px;
+  padding-top: 2px;
+  margin-top: 6px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-right: 5px;
+  margin-left: 901px;
+}
+
+.btn-modify {
+  color: #574f36;
+  border: 1px solid #574f36;
+  padding-bottom: 0px;
+  padding-top: 3px;
+  background: var(--bs-highlight-bg);
+}
+
+.btn-modify:hover {
+  background-color: #A67C52;
+}
+
+.btn-modify:active {
+  background-color: #A67C52;
+}
+
+.btn-modify:focus {
+  background-color: #A67C52;
+}
+
+.btn-delete:hover {
+  background-color: #A67C52;
+}
+
+.btn-delete:active {
+  background-color: #A67C52;
+}
+
+.btn-delete:focus {
+  background-color: #A67C52;
+}
+
+.page-link {
+
+  color: #A67C52;
+  border: 1px solid#A67C52;
+}
+
+.page-item.active {
+  background-color: #A67C52;
+  color: #ffffff;
+}
+
+.btn-thead {
+  color: #ffffff;
+}
+
+button {
+  cursor: pointer;
+}
+
+div.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: hsla(0, 0%, 0%, .5);
+  z-index: 1000;
+  display: none;
+}
+
+/* 元素 article 置中及基本樣式 */
+div.overlay>article {
+  background-color: white;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ddd;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

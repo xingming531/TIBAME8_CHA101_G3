@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>員工列表</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <style>
+        @import url("https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css");
+
+        .edit-button {
+            height: 30px;
+            padding: 4px 12px;
+            color: #a67c52;
+            background: rgb(241, 236, 209);
+            /* box-shadow: 0px 0px var(--bs-btn-hover-color); */
+            /* border-color: #fd780f; */
+            border: none;
+            border-radius: 5px;
+        }
+
+
+        #example tbody td:first-child {
+            font-weight: bold;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        #example tbody td:first-child:hover {
+            color: orange;
+        }
+
+        .admin-info-dialog {
+            text-align: center;
+        }
+
+        .admin-info-dialog i {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .admin-info-table {
+            margin: 10px auto;
+            text-align: left;
+        }
+
+        .admin-info-table td {
+            padding: 5px 10px;
+        }
+
+        .admin-info-table td:first-child {
+            font-weight: bold;
+        }
+
+        .edit-form {
+            margin: 10px auto;
+            text-align: left;
+        }
+
+        .edit-form input[type="password"],
+        .edit-form input[type="text"],
+        .edit-form select {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        .edit-form button {
+            display: block;
+            margin: 0 auto;
+            border-radius: 5px;
+            width: 100px;
+        }
+
+        .dataTables_wrapper .dataTables_paginate .paginate_button {
+            padding: 0.5em 1em;
+            margin-left: 0.5em;
+            color: #333;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+            color: #333;
+            border: 1px solid #ddd;
+            background-color: #f1ecd1;
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f1ecd1), color-stop(100%, #f1ecd1));
+            background: -webkit-linear-gradient(top, #f1ecd1 0%, #f1ecd1 100%);
+            background: -moz-linear-gradient(top, #f1ecd1 0%, #f1ecd1 100%);
+            background: -ms-linear-gradient(top, #f1ecd1 0%, #f1ecd1 100%);
+            background: -o-linear-gradient(top, #f1ecd1 0%, #f1ecd1 100%);
+            background: linear-gradient(to bottom, #f1ecd1 0%, #f1ecd1 100%);
+        }
+
+        .dataTables_wrapper .dataTables_paginate .paginate_button.current,
+        .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+            color: #333 !important;
+            border: 1px solid #979797;
+            background-color: #f1ecd1;
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f1ecd1), color-stop(100%, #f1ecd1));
+            background: -webkit-linear-gradient(top, #f1ecd1 0%, #f1ecd1 100%);
+            background: -moz-linear-gradient(top, #f1ecd1 0%, #f1ecd1 100%);
+            background: -ms-linear-gradient(top, #f1ecd1 0%, #f1ecd1 100%);
+            background: -o-linear-gradient(top, #f1ecd1 0%, #f1ecd1 100%);
+            background: linear-gradient(to bottom, #f1ecd1 0%, #f1ecd1 100%);
+        }
+    </style>
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0"
+            style="background: #f1ecd1;">
+            <div class="container-fluid d-flex flex-column p-0"><a
+                    class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0"
+                    href="/f_27/admin-table.html">
+                    <div class="sidebar-brand-text mx-3"><img width="59" height="33" src="/assets/img/logo-only.png">
+                    </div>
+                </a>
+                <hr class="sidebar-divider my-0">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown show"><a class="dropdown-toggle nav-link" aria-expanded="true"
+                            data-bs-toggle="dropdown" data-bs-auto-close="false" href="#"
+                            style="color: #a67c52;padding: 5px 16px;font-weight: bold;font-size: 14px;">網站管理</a>
+                        <div class="dropdown-menu show" data-bs-popper="none"
+                            style="background: rgba(255,255,255,0);border-style: none;padding: 0px;margin: 0px;margin-bottom: 5px;">
+                            <a class="dropdown-item" href="/news_product/NewsAlter.html"
+                                style="padding: 2px 30px;font-size: 13px;color: #574f36;">新增最新消息</a><a
+                                class="dropdown-item" href="/news_product/News.html"
+                                style="padding: 2px 30px;font-size: 13px;color: #574f36;">最新消息列表</a><a
+                                class="dropdown-item" href="/lostPet/lost_record_back.html"
+                                style="padding: 2px 30px;font-size: 13px;color: #574f36;">協尋文章列表</a><a
+                                class="dropdown-item" href="/admin/member_manage.html"
+                                style="padding: 2px 30px;font-size: 13px;color: #574f36;">會員列表</a>
+                            <div class="dropdown-divider" style="border-color: rgb(255,255,255);"></div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown show"><a class="dropdown-toggle nav-link" aria-expanded="true"
+                            data-bs-toggle="dropdown" data-bs-auto-close="false" href="#"
+                            style="color: #a67c52;padding: 5px 16px;font-weight: bold;font-size: 14px;">業主管理</a>
+                        <div class="dropdown-menu show" data-bs-popper="none"
+                            style="background: rgba(255,255,255,0);border-style: none;padding: 0px;margin: 0px;margin-bottom: 5px;color: #574f36;">
+                            <a class="dropdown-item" href="/owner/OwnerCheck.html"
+                                style="padding: 2px 30px;font-size: 13px;color: #574f36;">旅館業主審核</a><a
+                                class="dropdown-item" href="/owner/OwnerManage.html"
+                                style="padding: 2px 30px;font-size: 13px;color: #574f36;">旅館業主列表</a><a
+                                class="dropdown-item" href="/animalCorporation/AnimalCorporationCheck.html"
+                                style="padding: 2px 30px;font-size: 13px;color: #574f36;">收容業主審核</a><a
+                                class="dropdown-item" href="/animalCorporation/AnimalCorporationManage.html"
+                                style="padding: 2px 30px;font-size: 13px;color: #574f36;">收容業主列表</a>
+                            <div class="dropdown-divider" style="border-color: rgb(255,255,255);"></div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown show"><a class="dropdown-toggle nav-link" aria-expanded="true"
+                            data-bs-toggle="dropdown" data-bs-auto-close="false" href="#"
+                            style="color: #a67c52;padding: 5px 16px;font-weight: bold;font-size: 14px;">商城管理</a>
+                        <div class="dropdown-menu show" data-bs-popper="none"
+                            style="background: rgba(255,255,255,0);border-style: none;padding: 0px;margin: 0px;margin-bottom: 5px;color: #574f36;">
+                            <a class="dropdown-item" href="/news_product/ProductAlter.html"
+                                style="padding: 2px 30px;font-size: 13px;color: #574f36;">新增商品</a><a
+                                class="dropdown-item" href="/news_product/Product.html"
+                                style="padding: 2px 30px;font-size: 13px;color: #574f36;">商品列表</a><a
+                                class="dropdown-item" href="/back-order-master/back-order-master.html"
+                                style="padding: 2px 30px;font-size: 13px;color: #574f36;">訂單列表</a>
+                            <div class="dropdown-divider" style="border-color: rgb(255,255,255);"></div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown show"><a class="dropdown-toggle nav-link" aria-expanded="true"
+                            data-bs-toggle="dropdown" data-bs-auto-close="false" href="#"
+                            style="color: #a67c52;padding: 5px 16px;font-weight: bold;font-size: 14px;">員工管理</a>
+                        <div class="dropdown-menu show" data-bs-popper="none"
+                            style="background: rgba(255,255,255,0);border-style: none;padding: 0px;margin: 0px;margin-bottom: 5px;color: #574f36;">
+                            <a class="dropdown-item" href="/f_27/admin-table.html"
+                                style="padding: 2px 30px;font-size: 13px;color: #574f36;">員工列表</a>
+                            <div class="dropdown-divider" style="border-color: rgb(255,255,255);"></div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0"
+                        id="sidebarToggle-1" type="button"></button></div>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper" style="width: 95%;">
+            <div id="content">
+                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle me-3"
+                            id="sidebarToggleTop-1" type="button"><i class="fas fa-bars"></i></button>
+                        <ul class="navbar-nav flex-nowrap ms-auto">
+                            <li class="nav-item dropdown no-arrow">
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link"
+                                        aria-expanded="false" data-bs-toggle="dropdown" href="#"><span
+                                            class="d-none d-lg-inline me-2 text-gray-600 small" id="admin-name">Valerie
+                                            Luna</span></a>
+                                    <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"
+                                        style="min-width: 110px;"><a class="dropdown-item" id="logout-button"><i
+                                                class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Logout</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <button id="addEmployeeButton" style="font-size: 20px; border-radius: 5px;"> 新 增 員 工 </button>
+
+                <div>
+                    <table id="example" class="display">
+                        <thead>
+                            <tr>
+                                <th>姓名</th>
+                                <th>Email</th>
+                                <th>職稱</th>
+                                <th>狀態</th>
+                                <th>編輯</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>姓名</th>
+                                <th>Email</th>
+                                <th>職稱</th>
+                                <th>狀態</th>
+                                <th>編輯</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+            <footer class="bg-white sticky-footer">
+                <div class="container my-auto">
+                    <div class="text-center my-auto copyright"><span>Copyright © Brand 2023</span></div>
+                </div>
+            </footer>
+        </div>
+        <a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/assets/js/admin_login.js"></script>
+    <script src="/assets/js/admin_nav.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            guardIsSignedIn();
+
+            // Event listener for "Add New Employee" button
+            $('#addEmployeeButton').click(function () {
+                // Display the employee info table in Swal.fire
+                Swal.fire({
+                    title: '新增員工',
+                    html: getEmployeeInfoTable(),
+                    icon: 'info',
+                    showCloseButton: true,
+                    showConfirmButton: false,
+                    customClass: {
+                        container: 'admin-info-dialog'
+                    },
+                    didOpen: function () {
+                        // Event listener for employee info form submission
+                        $('#employeeInfoForm').submit(function (event) {
+                            event.preventDefault(); // Prevent form submission
+
+                            // // Serialize form data
+                            // var formData = $(this).serialize();
+                            // Serialize form data
+                            var formData = {
+                                admin: {
+                                    name: $('#add-name').val(),
+                                    account: $('#add-account').val(),
+                                    password: $('#add-password').val(),
+                                    phone: $('#add-phone').val(),
+                                    address: $('#add-address').val(),
+                                    email: $('#add-email').val(),
+                                    title: $('#add-title').val(),
+                                },
+                                functionId: []
+                            };
+
+                            // Retrieve selected functions
+                            $('[name="function-checkbox"]:checked').each(function () {
+                                var funcId = $(this).val();
+                                formData.functionId.push(parseInt(funcId));
+                            });
+
+                            // AJAX request to add new employee
+                            $.ajax({
+                                type: 'POST',
+                                url: '/admin/add', // Replace with the actual URL
+                                data: JSON.stringify(formData),
+                                contentType: 'application/json',
+                                success: function (response) {
+                                    console.log('Employee added:', response);
+
+                                    // Display success message
+                                    Swal.fire({
+                                        title: '新增成功！',
+                                        icon: 'success',
+                                        showCloseButton: true,
+                                        showConfirmButton: false,
+                                        customClass: {
+                                            container: 'admin-info-dialog'
+                                        }
+                                    }).then((result) => {
+                                        if (result.dismiss === Swal.DismissReason.backdrop || Swal.DismissReason.close) {
+                                            location.reload();
+                                        }
+                                    });
+
+                                    // Clear form fields
+                                    // $('#employeeInfoForm')[0].reset();
+                                },
+                                error: function (error) {
+                                    console.log('Failed to add employee:', error);
+
+                                    // Display error message
+                                    Swal.fire({
+                                        title: 'Error',
+                                        text: 'Failed to add employee.',
+                                        icon: 'error',
+                                        showCloseButton: true,
+                                        showConfirmButton: false,
+                                        customClass: {
+                                            container: 'admin-info-dialog'
+                                        }
+                                    });
+                                }
+                            });
+                        });
+                    }
+                });
+            });
+
+            // Admin list table
+            var table = $('#example').DataTable({
+                "ajax": {
+                    "url": "/admin/all",
+                    "dataSrc": "" // The data is not wrapped in an object property
+                },
+                "columns": [
+                    {
+                        "data": "name",
+                        "render": function (data, type, row) {
+                            return '<span class="admin-info-text">' + data + '</span>';
+                        }
+                    },
+                    { "data": "email" },
+                    {
+                        "data": "title",
+                        "render": function (data, type, row) {
+                            if (data === "0") {
+                                return "主管";
+                            } else if (data === "1") {
+                                return "正職";
+                            } else if (data === "2") {
+                                return "工讀生";
+                            } else {
+                                return "";
+                            }
+                        }
+                    },
+                    {
+                        "data": "status",
+                        "render": function (data, type, row) {
+                            return (data === "0") ? "在職" : "離職";
+                        }
+                    },
+                    {
+                        "data": null,
+                        "render": function (data, type, row) {
+                            return '<button type="button" class="edit-button">編輯</button>';
+                        }
+                    }
+                ],
+                "language": {
+                    "loadingRecords": "Loading...",
+                    "zeroRecords": "查無符合資料",
+                    "lengthMenu": " 顯示:_MENU_ 　　　　",
+                    "info": "顯示 _START_ ~ _END_ 筆, 共 _TOTAL_ 筆",
+                    "infoEmpty": "",
+                    "infoFiltered": "(從 _MAX_ 筆資料中篩選)",
+                    "search": "搜尋:",
+                    "paginate": {
+                        "first": "第一頁",
+                        "last": "最後一頁",
+                        "next": "下一頁",
+                        "previous": "上一頁"
+                    },
+                }
+            });
+
+            // Event listener for admin info text click
+            $('#example tbody').on('click', 'span.admin-info-text', function () {
+                var data = table.row($(this).closest('tr')).data();
+
+                // Prepare the admin info table
+                var adminInfoTable = '<table class="admin-info-table">';
+                adminInfoTable += '<tr><td>員工編號:</td><td>' + data.id + '</td></tr>';
+                adminInfoTable += '<tr><td>姓名:</td><td>' + data.name + '</td></tr>';
+                adminInfoTable += '<tr><td>Email:</td><td>' + data.email + '</td></tr>';
+                adminInfoTable += '<tr><td>連絡電話:</td><td>' + (data.phone ? data.phone : 'N/A') + '</td></tr>';
+                adminInfoTable += '<tr><td>地址:</td><td>' + (data.address ? data.address : 'N/A') + '</td></tr>';
+                adminInfoTable += '<tr><td>職稱:</td><td>' + getTitleText(data.title) + '</td></tr>';
+                adminInfoTable += '<tr><td>狀態:</td><td>' + getStatusText(data.status) + '</td></tr>';
+                adminInfoTable += '<tr><td>權限:</td><td>' + getAccessTextNew(data.accesses) + '</td></tr>';
+                adminInfoTable += '</table>';
+
+                Swal.fire({
+                    title: '員工資訊',
+                    html: '<div><i class="fas fa-info-circle"></i></div><div>' + adminInfoTable + '</div>',
+                    // icon: 'info',
+                    showCloseButton: true,
+                    showConfirmButton: false,
+                    customClass: {
+                        container: 'admin-info-dialog'
+                    }
+                });
+            });
+
+            // Event listener for edit button click
+            $('#example tbody').on('click', 'button.edit-button', function () {
+                var data = table.row($(this).closest('tr')).data();
+
+                // Prepare the edit form
+                var editForm = '<form class="edit-form">';
+                editForm += '<label for="edit-name">姓名:</label>';
+                editForm += '<input type="text" id="edit-name" name="edit-name" value="' + data.name + '" required>';
+                editForm += '<label for="edit-account">帳號:</label>';
+                editForm += '<input type="text" id="edit-account" name="edit-account" value="' + data.account + '" readonly>';
+                editForm += '<label for="edit-password">密碼:</label>';
+                editForm += '<input type="password" id="edit-password" name="edit-password" required>';
+                editForm += '<label for="edit-email">Email:</label>';
+                editForm += '<input type="text" id="edit-email" name="edit-email" value="' + data.email + '" required>';
+                editForm += '<label for="edit-phone">電話:</label>';
+                editForm += '<input type="text" id="edit-phone" name="edit-phone" value="' + (data.phone ? data.phone : '') + '" required>';
+                editForm += '<label for="edit-address">地址:</label>';
+                editForm += '<input type="text" id="edit-address" name="edit-address" value="' + (data.address ? data.address : '') + '" required>';
+                editForm += '<label for="edit-title">職稱:</label>';
+                editForm += '<select id="edit-title" name="edit-title">';
+                editForm += '<option value="0" ' + (data.title === '0' ? 'selected' : '') + '>主管</option>';
+                editForm += '<option value="1" ' + (data.title === '1' ? 'selected' : '') + '>正職</option>';
+                editForm += '<option value="2" ' + (data.title === '2' ? 'selected' : '') + '>工讀生</option>';
+                editForm += '</select>';
+                editForm += '<label for="edit-status">狀態:</label>';
+                editForm += '<select id="edit-status" name="edit-status">';
+                editForm += '<option value="0" ' + (data.status === '0' ? 'selected' : '') + '>在職</option>';
+                editForm += '<option value="1" ' + (data.status === '1' ? 'selected' : '') + '>離職</option>';
+                editForm += '</select>';
+                // Access functions checkboxes
+                var accessFunctions = [
+                    { id: 1, name: '員工管理　' },
+                    { id: 2, name: '旅館管理　' },
+                    { id: 3, name: '商城管理　' },
+                    { id: 4, name: '收容管理' }
+                ];
+
+                editForm += '<label for="edit-access">權限:　</label>';
+                accessFunctions.forEach(function (func) {
+                    var isChecked = data.accesses.some(function (access) {
+                        return access.id.functionId === func.id;
+                    });
+                    editForm += '<input type="checkbox" id="' + func.id + '" value="' + func.name + '" name="admin_access" ' + (isChecked ? 'checked' : '') + '>';
+                    editForm += '<label for="' + func.id + '">' + func.name + '</label>';
+                });
+                editForm += '<br><br></label>';
+                editForm += '<button type="submit" style="border-radius: 5px;" class="edit-confirm-button">確定</button>';
+                editForm += '</form>';
+
+
+                Swal.fire({
+                    title: '編輯員工',
+                    html: editForm,
+                    icon: 'info',
+                    showCloseButton: true,
+                    showConfirmButton: false,
+                    customClass: {
+                        container: 'admin-info-dialog'
+                    }
+                });
+
+                // Event listener for edit confirm button click
+                $('.edit-confirm-button').submit(function () {
+                    var editedData = {
+                        id: data.id,
+                        name: $('#edit-name').val(),
+                        password: $('#edit-password').val(),
+                        phone: $('#edit-phone').val(),
+                        address: $('#edit-address').val(),
+                        email: $('#edit-email').val(),
+                        title: $('#edit-title').val(),
+                        status: $('#edit-status').val(),
+                        functionIds: []
+                    };
+
+                    // Get the selected functionIds from the checkboxes
+                    $('input[name="admin_access"]:checked').each(function () {
+                        editedData.functionIds.push($(this).attr('id'));
+                    });
+
+                    // Make an AJAX request to the server
+                    $.ajax({
+                        url: 'http://localhost:8080/admin/modify',
+                        type: 'PUT',
+                        contentType: 'application/json',
+                        data: JSON.stringify(editedData),
+                        success: function (response) {
+                            // Display success message
+                            Swal.fire({
+                                title: '修改成功！',
+                                icon: 'success',
+                                showCloseButton: true,
+                                showConfirmButton: false,
+                                customClass: {
+                                    container: 'admin-info-dialog'
+                                }
+                            }).then((result) => {
+                                if (result.dismiss === Swal.DismissReason.backdrop || Swal.DismissReason.close) {
+                                    location.reload();
+                                }
+                            });
+                        },
+                        error: function (error) {
+                            // Handle the error response
+                            console.log(error);
+                        }
+                    });
+                });
+
+            });
+
+            // Helper function to get the title text
+            function getTitleText(title) {
+                if (title === "0") {
+                    return "主管";
+                } else if (title === "1") {
+                    return "正職";
+                } else if (title === "2") {
+                    return "工讀生";
+                } else {
+                    return "";
+                }
+            }
+
+            // Helper function to get the status text
+            function getStatusText(status) {
+                return (status === "0") ? "在職" : "離職";
+            }
+
+            // Helper function to get the access text (admin info)
+            function getAccessTextNew(accesses) {
+                let result = "";
+                for (let i = 0; i < accesses.length; i++) {
+                    const access = accesses[i];
+                    const accessName = getAccessTextById(access.id.functionId);
+                    result += accessName;
+                    if (i !== accesses.length - 1) {
+                        result += "、";
+                    }
+                }
+                return result;
+            }
+
+            function getAccessTextById(id) {
+                if (id === 1) {
+                    return "員工管理";
+                } else if (id === 2) {
+                    return "旅館管理"
+                } else if (id === 3) {
+                    return "商城管理"
+                } else if (id === 4) {
+                    return "收容管理"
+                } else {
+                    return "";
+                }
+            }
+        });
+
+        function getEmployeeInfoTable() {
+            var employeeInfoTable = `
+                    <form id="employeeInfoForm">
+                        <table class="admin-info-table">
+                            <tr>
+                                <td>姓名:</td>
+                                <td><input type="text" name="name" id="add-name" required></td>
+                            </tr>
+                            <tr>
+                                <td>帳號:</td>
+                                <td><input type="text" name="account" id="add-account" required></td>
+                            </tr>
+                            <tr>
+                                <td>密碼:</td>
+                                <td><input type="password" name="password" id="add-password" required></td>
+                            </tr>
+                            <tr>
+                                <td>電話:</td>
+                                <td><input type="text" name="phone" id="add-phone"></td>
+                            </tr>
+                            <tr>
+                                <td>地址:</td>
+                                <td><input type="text" name="address" id="add-address"></td>
+                            </tr>
+                            <tr>
+                                <td>Email:</td>
+                                <td><input type="email" name="email" id="add-email" required></td>
+                            </tr>
+                            <tr>
+                                <td>職稱:</td>
+                                <td>
+                                    <select name="title" id="add-title" required>
+                                        <option value="0">主管</option>
+                                        <option value="1">正職</option>
+                                        <option value="2">工讀生</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>權限:</td>
+                                <td>
+                                    <input type="checkbox" id="function1" name="function-checkbox" value="1"><label for="function1"> 員工管理</label><br>
+                                    <input type="checkbox" id="function2" name="function-checkbox" value="2"><label for="function2"> 旅館管理</label><br>
+                                    <input type="checkbox" id="function3" name="function-checkbox" value="3"><label for="function3"> 商城管理</label><br>
+                                    <input type="checkbox" id="function4" name="function-checkbox" value="4"><label for="function4"> 收容管理</label><br>
+                                </td>
+                            </tr>
+                        </table>
+                        <button type="submit" style="border-radius: 5px;">確定</button>
+                    </form>
+                `;
+            return employeeInfoTable;
+        };
+    </script>
+</body>
+
+</html>

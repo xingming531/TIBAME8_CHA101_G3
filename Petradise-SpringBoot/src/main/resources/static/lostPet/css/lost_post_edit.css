@@ -1,0 +1,104 @@
+.border-top {
+	border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.border-top-gray {
+	border-top-color: #adb5bd;
+}
+
+.box-shadow {
+	box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+.lh-condensed {
+	line-height: 1.25;
+}
+
+.btn-submit {
+	align-items: center;
+	background-color: #574f36;
+	color: #fff;
+	padding: 10px 15px;
+	border-radius: 4px;
+	border: none;
+	margin-right: 40px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.text {
+	border: 1px solid lightgray;
+}
+
+#preview {
+	border: 1px solid lightgray;
+	display: inline-block;
+	width: 500px;
+	min-height: 400px;
+	position: relative;
+}
+
+#preview span.text {
+	position: absolute;
+	display: inline-block;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+	color: lightgray;
+}
+
+#preview img.preview_img {
+	width: 100%;
+}
+
+.output {
+	width: 100%;
+	min-height: 150px;
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	gap: 15px;
+	position: relative;
+	border-radius: 5px;
+}
+
+.output .image {
+	height: 150px;
+	border-radius: 5px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+	overflow: hidden;
+	position: relative;
+}
+
+.output .image img {
+	height: 100%;
+	width: 100%;
+}
+
+.output .image span {
+	position: absolute;
+	top: -4px;
+	right: 4px;
+	cursor: pointer;
+	font-size: 22px;
+	color: white;
+}
+
+.output .image span:hover {
+	opacity: 0.8;
+}
+
+.output .span--hidden {
+	visibility: hidden;
+}
+
+.py-5  {
+	border-radius: 10px;
+	background-color: #f1ecd1;
+}

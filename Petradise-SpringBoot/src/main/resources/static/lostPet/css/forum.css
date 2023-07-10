@@ -1,0 +1,154 @@
+#main-content {
+	position: relative;
+	white-space: pre-wrap;
+}
+
+.bbs-screen {
+	color: #bbb;
+	background-color: #000;
+	line-height: 100%;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+	background-color: #000;
+	line-height: 100%;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	margin: 0 auto;
+	padding: 0;
+	line-height: 100%;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	margin: 0 auto;
+	padding: 0;
+	word-wrap: break-word;
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+	background-color: #000;
+	line-height: 100%;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	margin: 0 auto;
+	padding: 0;
+	line-height: 100%;
+}
+
+.comment {
+	color: #bbb;
+	background-color: #000;
+	line-height: 100%;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+	background-color: #000;
+	line-height: 100%;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	margin: 0 auto;
+	padding: 0;
+	line-height: 100%;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	margin: 0 auto;
+	padding: 0;
+	word-wrap: break-word;
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+	background-color: #000;
+	line-height: 100%;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	margin: 0 auto;
+	padding: 0;
+	line-height: 100%;
+}
+
+.article-metaline {
+	margin: 0;
+	padding: 0;
+	background-color: #008;
+}
+
+.article-meta-tag {
+	padding: 0 1ex;
+	background-color: #999;
+	color: #008;
+}
+
+.article-meta-value {
+	padding: 0 1ex;
+	background-color: #008;
+	color: #999;
+}
+
+.an {
+	color: #990;
+}
+
+.f3 {
+	color: #990;
+}
+
+.push-ipdatetime {
+	float: right;
+}
+
+.clip-border {
+	padding-top: 5%;
+	padding-left: 15%;
+	padding-right: 15%;
+	padding-bottom: 15%;
+}
+
+#main-container {
+	border: 3px solid black;
+}
+
+.button-res {
+	display: inline-block;
+	padding: 10px 20px;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	background-color: #fd780f;
+	color: #fff;
+	border-radius: 4px;
+	border: none;
+	cursor: pointer;
+	transition: #fd780f 0.3s ease;
+	margin-left: 450px;
+}
+
+.animal-pic {
+  display: flex;
+  flex-wrap: wrap; 
+}
+
+.animal-pic .pic {
+  width: 50%; 
+  margin-left: 65px;
+  margin-bottom: 10px; 
+}
+
+.button-redi {
+	display: inline-block;
+	padding: 10px 20px;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	background-color: #fd780f;
+	color: #fff;
+	border-radius: 4px;
+	border: none;
+	cursor: pointer;
+	transition: #fd780f 0.3s ease;
+	margin-right: 400px;
+}

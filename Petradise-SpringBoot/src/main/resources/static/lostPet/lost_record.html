@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<title>會員發文管理</title>
+<link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=ABeeZee&amp;display=swap">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Alata&amp;display=swap">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Alef&amp;display=swap">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Allerta&amp;display=swap">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Almarai&amp;display=swap">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Amiko&amp;display=swap">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Andika&amp;display=swap">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Anek+Kannada&amp;display=swap">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Anonymous+Pro&amp;display=swap">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Anybody&amp;display=swap">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Azeret+Mono&amp;display=swap">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=B612+Mono&amp;display=swap">
+<link rel="shortcut icon" href="/assets/img/fav_icon.png" type="image/x-icon">
+	
+<link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+<link rel="stylesheet" href="./css/post_record.css">
+</head>
+
+<body>
+<nav class="navbar navbar-light navbar-expand-md py-3" data-aos="zoom-in" data-aos-duration="1500">
+	<div class="container">
+		<a class="navbar-brand d-flex align-items-center" href="/index.html" style="position: sticky;top: 0;">
+			<img width="75" height="41" src="/assets/img/logo-only.png">
+		</a>
+
+		<button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-3"
+				style="border-color: rgb(241,236,209);">
+			<span class="visually-hidden">Toggle navigation</span>
+			<span class="navbar-toggler-icon"
+				  style="--bs-primary: #fd780f;--bs-primary-rgb: 253,120,15;--bs-secondary: #e69609;--bs-secondary-rgb: 230,150,9;color: rgb(241,236,209);">
+        </span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navcol-3" style="background: #ffffff;">
+			<ul class="navbar-nav mx-auto">
+				<li class="nav-item dropdown" style="width: 100px;margin: 0px 0px 0px 10px">
+					<a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown"
+					   data-bs-auto-close="outside" href="/index.html" style="margin: 10px 0px 0px;">關於我們</a>
+					<div class="dropdown-menu" style="min-width: 110px;margin: 1px 0px 0px;border: 0px none rgba(33,37,41,0);">
+						<div class="dropdown-divider"
+							 style="color: rgba(33,37,41,0);margin: 4px 0px;border-color: rgb(241,236,209);">
+						</div>
+						<a class="dropdown-item" href="/index.html#news-contain" style="font-size: 14px;">最新消息</a>
+						<a class="dropdown-item" href="/index.html#aboutMe-contain" style="font-size: 14px;">關於我們</a>
+					</div>
+				</li>
+
+				<li class="nav-item dropdown" style="width: 100px;margin: 0px 0px 0px 10px">
+					<a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown"
+					   data-bs-auto-close="outside" href="#" style="margin: 10px 0px 0px;">毛孩旅館</a>
+					<div class="dropdown-menu" style="min-width: 110px;margin: 1px 0px 0px;border: 0px none rgba(33,37,41,0);">
+
+						<div class="dropdown-divider" style="color: rgba(33,37,41,0);margin: 4px 0px;border-color: rgb(241,236,209);">
+						</div>
+						<a class="dropdown-item" href="/hotel/searchHotel.html" style="font-size: 14px">預約訂房</a>
+						<a class="dropdown-item join-hotelowner" href="/owner/SignUp.html" style="font-size: 14px;color: #fd780f;">加入我們</a>
+					</div>
+				</li>
+
+				<li class="nav-item dropdown" style="width: 100px;margin: 0px 0px 0px 10px">
+					<a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown"
+					   data-bs-auto-close="outside" href="#" style="margin: 10px 0px 0px;">浪浪收容</a>
+					<div class="dropdown-menu" style="min-width: 110px;margin: 1px 0px 0px;border: 0px none rgba(33,37,41,0);">
+						<div class="dropdown-divider"
+							 style="color: rgba(33,37,41,0);margin: 4px 0px;border-color: rgb(241,236,209);">
+						</div>
+						<a class="dropdown-item" href="/animal_39/Frontanimal/animalbrowse.html" style="font-size: 14px">浪浪認養</a>
+						<a class="dropdown-item lostPet" href="/lostPet/lost.html" style="font-size: 14px">遺失協尋</a>
+						<a class="dropdown-item" href="/animalCorporation/signup.html" style="font-size: 14px">加入我們</a>
+					</div>
+				</li>
+
+				<li class="nav-item" style="height: 50px;width: 100px;margin: 0px 0px 0px 10px">
+					<a class="nav-link" href="/front-product-list/front-product-list.html" style="width: 100px;margin: 10px 0px 0px;">寵物商城</a>
+				</li>
+
+				<!--          <li class="nav-item dropdown" style="width: 100px;margin: 0px 0px 0px 10px">-->
+				<!--            <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown"-->
+				<!--              data-bs-auto-close="outside" href="#" style="margin: 10px 0px 0px;" target="_parent">客服中心</a>-->
+				<!--            <div class="dropdown-menu" style="min-width: 110px;margin: 1px 0px 0px;border: 0px none rgba(33,37,41,0);">-->
+				<!--              <div class="dropdown-divider" style="color: rgba(33,37,41,0);margin: 4px 0px;border-color: rgb(241,236,209);">-->
+				<!--              </div>-->
+				<!--              <a class="dropdown-item" href="#" style="font-size: 14px">常見問題</a>-->
+				<!--              <a class="dropdown-item" href="#" style="font-size: 14px">服務認證</a>-->
+				<!--              <a class="dropdown-item" href="#" style="font-size: 14px">聯絡我們</a>-->
+				<!--            </div>-->
+				<!--          </li>-->
+
+			</ul>
+
+			<!-- Shopping Cart -->
+			<div class="btn btn-primary cart" style="cursor: pointer;margin-top: 10px;margin-right: 10px;border-style: none;background: rgb(255,255,255);color: #fd780f;height: 38px;width: 100px;">
+            <span class="fas fa-shopping-cart"
+				  style="margin: 9px 5px 0px -12px;padding: 0px;font-size: 24px;color: #fd780f;height: 26px;width: 26px;margin-top: 0px;margin-right: 3px;margin-bottom: 3px;margin-left: 3px;">
+            </span>
+				<span class="shopping-cart-total"></span>
+			</div>
+
+			<!-- Member -->
+			<div class="btn-group" style="margin: 10px 0px 0px;">
+				<a class="btn btn-primary" type="button" style="height: 38px;width: 90px;background: #fd780f;border-color: rgb(255, 255, 255);padding-top: 6px">
+					<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16"
+						 class="bi bi-person-circle" style="margin: 0px 3px 3px;padding: 0px;font-size: 26px;">
+						<path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
+						<path fill-rule="evenodd"
+							  d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z">
+						</path>
+					</svg>會員
+				</a>
+				<button class="btn btn-primary dropdown-toggle dropdown-toggle-split"
+						data-bs-toggle="dropdown" aria-expanded="false" type="button"
+						style="background: #fd780f;border-color: rgb(255, 255, 255);width: 29.5833px;"></button>
+				<div class="dropdown-menu" style="min-width: 118px;background: #fd780f;margin: 1px 0px 0px;">
+					<a class="dropdown-item navigate-signin" href="#" style="color: #ffffff;">登入/註冊</a>
+					<a class="dropdown-item navigate-member-center" href="#" style="color: #ffffff;">會員中心</a>
+					<a class="dropdown-item logout" style="color: #ffffff;">登出</a>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+</nav>
+
+	<div class="container_re">
+		<h2>遺失寵物貼文管理</h2>
+		<button class="btn-create">新增貼文</button>
+
+		<div class="article-container">
+			<div class="article">
+				<div class="article-title">
+					<h5></h5>
+				</div>
+				<div class="info">
+					<h5></h5>
+					<a href="lostPet/lost_post_edit.html?" class="btn-edit">修改</a>	
+					<button class="btn-delete">刪除</button>
+					<a href="/lostPet/forum.html?" class="btn-more">更多內容</a>
+				</div>
+			</div>
+			<div class="conta"></div>
+		</div>
+	</div>
+
+
+
+
+	<footer class="text-center">
+		<div class="container text-muted py-4 py-lg-5">
+			<ul class="list-inline">
+				<li class="list-inline-item me-4"><a class="link-secondary"
+					href="#" style="color: #f8c544;">Web design</a></li>
+				<li class="list-inline-item me-4"><a class="link-secondary"
+					href="#">Development</a></li>
+				<li class="list-inline-item"><a class="link-secondary" href="#">Hosting</a></li>
+			</ul>
+			<ul class="list-inline">
+				<li class="list-inline-item me-4"><svg
+						xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+						fill="currentColor" viewBox="0 0 16 16" class="bi bi-facebook"
+						style="border-color: #fd780f; color: #fd780f;">
+                        <path
+							d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z">
+                        </path>
+                    </svg></li>
+				<li class="list-inline-item me-4"><svg
+						xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+						fill="currentColor" viewBox="0 0 16 16" class="bi bi-twitter"
+						style="color: #fd780f;">
+                        <path
+							d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z">
+                        </path>
+                    </svg></li>
+				<li class="list-inline-item"><svg
+						xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+						fill="currentColor" viewBox="0 0 16 16" class="bi bi-instagram"
+						style="border-color: #fd780f; color: #fd780f;">
+                        <path
+							d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z">
+                        </path>
+                    </svg></li>
+			</ul>
+			<p class="mb-0">Copyright © 2023 PETRADISE</p>
+		</div>
+	</footer>
+
+</body>
+<script src="../assets/js/login.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js'></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
+	integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="
+	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+	    const btn_create = document.querySelector('.btn-create');
+	    const btn_delete = document.querySelector('.btn-delete');
+	    let conta = document.querySelector(".conta");
+	    const titleElement = document.querySelector(".article-title h5");
+	    const infoElement = document.querySelector(".info h5");
+	    const moreContentLink = document.querySelector(".btn-more");
+	    const editLink = document.querySelector(".btn-edit");
+        const mem_id = getMemberId();
+	    let deleteId ;
+	    
+	    guardIsSignedIn();
+
+	    btn_create.addEventListener('click', () => {
+	        const targetPageUrl = './lost_post.html';
+	        window.location.href = targetPageUrl;
+	    });
+	    axios.get("/LostPetArticle/memId=" + mem_id)
+	    .then(function (response) {
+	      console.log(response.data);
+	      let data = response.data;
+
+	      
+	      let html = '';
+
+	      if (Array.isArray(data)) {
+	    	  let parentElement = document.querySelector(".article");
+	    	  parentElement.remove();
+	    	  
+	        
+	    	  data.forEach(function (item) {
+		    	  deleteId = item.articleId;
+					
+	    		  html += `
+		        	<div class="article article${item.articleId}">
+		              <div class="article-title">
+		                <h5>${item.title}</h5>
+		              </div>
+		              <div class="info">
+		                <h5>${item.text}</h5>
+		                <a href="/lostPet/lost_post_edit.html?id=${item.articleId}" class="btn-edit">修改</a>
+		                <button class="btn-delete" id = ${deleteId} >刪除</button>
+		                <a href="/lostPet/forum.html?id=${item.articleId}" class="btn-more">更多內容</a>
+		              </div>
+		            </div>
+		            `;
+		    	 
+	    	  });
+	      } 
+	      conta.innerHTML = html;
+	      
+	      
+	      const deleteButtons = document.querySelectorAll('.btn-delete');
+	      deleteButtons.forEach(function(button) {
+	          button.addEventListener('click', function() {
+	              deleteId = button.getAttribute('id');
+	              console.log(deleteId);
+	              $.ajax({
+	                  url: '/LostPetArticle/delete/id=' + deleteId,
+	                  type: 'PUT',
+	                  success: function(response) {
+	                      console.log('Article deleted:', response);
+	                      let className = '.article'+deleteId ;
+	                      let parentElement = document.querySelector(className);
+	                      
+	                      parentElement.remove();
+	                  },
+	                  error: function(xhr, status, error) {
+	                      console.log('Error:', error);
+	                  }
+	              });
+	          });
+	      });
+	    })
+	    .catch(function (error) {
+	      console.log(error);
+	    });
+
+    </script>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>新增房間資訊</title>
+    <link rel="stylesheet" href="/hotel/assets17/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
+    <link rel="stylesheet" href="/hotel/assets17/fonts/fontawesome-all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="/assets/img/fav_icon.png" type="image/x-icon">
+</head>
+
+<body>
+<div id="wrapper">
+    <nav
+            class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0"
+            style="background: #f1ecd1;">
+        <div class="container-fluid d-flex flex-column p-0">
+            <a
+                    class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0"
+                    href="#">
+                <div class="sidebar-brand-text mx-3">
+                    <img width="59" height="33"
+                         src="./assets17/img/avatars/logo-only.png">
+                </div>
+            </a>
+            <hr class="sidebar-divider my-0">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown show"><a
+                        class="dropdown-toggle nav-link" aria-expanded="true"
+                        data-bs-toggle="dropdown" data-bs-auto-close="false" href="#"
+                        style="color: #a67c52; padding: 5px 16px; font-weight: bold; font-size: 14px;">帳號管理</a>
+                    <div class="dropdown-menu show" data-bs-popper="none"
+                         style="background: rgba(255, 255, 255, 0); border-style: none; padding: 0px; margin: 0px; margin-bottom: 5px;">
+                        <a class="dropdown-item" href="../owner/OwnerAccount.html"
+                           style="padding: 2px 30px; font-size: 13px;">基本資料</a>
+                        <div class="dropdown-divider"
+                             style="border-color: rgb(255, 255, 255);"></div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown show"><a
+                        class="dropdown-toggle nav-link" aria-expanded="true"
+                        data-bs-toggle="dropdown" data-bs-auto-close="false" href="#"
+                        style="color: #a67c52; padding: 5px 16px; font-weight: bold; font-size: 14px;">房間管理</a>
+                    <div class="dropdown-menu show" data-bs-popper="none"
+                         style="background: rgba(255, 255, 255, 0); border-style: none; padding: 0px; margin: 0px; margin-bottom: 5px;">
+                        <a class="dropdown-item" href="roomType.html"
+                           style="padding: 2px 30px; font-size: 13px;">房型資訊</a><a
+                            class="dropdown-item" href="room.html"
+                            style="padding: 2px 30px; font-size: 13px;">房間資訊</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown show"><a
+                        class="dropdown-toggle nav-link" aria-expanded="true"
+                        data-bs-toggle="dropdown" data-bs-auto-close="false" href="#"
+                        style="color: #a67c52; padding: 5px 16px; font-weight: bold; font-size: 14px;">訂單管理</a>
+                    <div class="dropdown-menu show" data-bs-popper="none"
+                         style="background: rgba(255, 255, 255, 0); border-style: none; padding: 0px; margin: 0px; margin-bottom: 5px;">
+                        <a class="dropdown-item" href="../f_27/hotel-orders.html"
+                           style="padding: 2px 30px; font-size: 13px;">訂單管理</a>
+                        <div class="dropdown-divider"
+                             style="border-color: rgb(255, 255, 255);"></div>
+                    </div>
+                </li>
+            </ul>
+            <div class="text-center d-none d-md-inline">
+                <button class="btn rounded-circle border-0" id="sidebarToggle"
+                        type="button"></button>
+            </div>
+        </div>
+    </nav>
+    <div class="d-flex flex-column" id="content-wrapper">
+        <div id="content">
+            <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+                <div class="container-fluid">
+                    <button class="btn btn-link d-md-none rounded-circle me-3"
+                            id="sidebarToggleTop-1" type="button"><i class="fas fa-bars"></i></button>
+                    <ul class="navbar-nav flex-nowrap ms-auto">
+                        <li class="nav-item dropdown no-arrow">
+                            <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link"
+                                                                       aria-expanded="false" data-bs-toggle="dropdown"
+                                                                       href="#"><span id="owner-name"
+                                                                                      class="d-none d-lg-inline me-2 text-gray-600 small"></span></a>
+                                <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"
+                                     style="min-width: 110px;"><a class="dropdown-item" href="#" onclick="logout()"><i
+                                        class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Logout</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="container-fluid">
+                <h3 class="text-dark mb-1" style="color: #574f36;--bs-dark: #574f36;--bs-dark-rgb: 87,79,54;">新增房間資訊
+                </h3>
+                <form id="roomForm" style="padding: 16px;">
+                    <div style="margin: 20px;"><label class="form-label"
+                                                      style="width: 90px;color: #a67c52;">房間名稱：</label>
+                        <input class="form-control" type="text" name="room_name"
+                               style="display: inline-block;width: 750px;border-color: #f1ecd1;" required>
+                    </div>
+                    <div style="margin: 20px;"><label class="form-label"
+                                                      style="width: 90px;color: #a67c52;">房型名稱：</label>
+                        <select class="form-control" id="roomTypeSelect" name="room_type_name"
+                                style="display: inline-block;width: 750px;border-color: #f1ecd1;" required>
+                            <!-- 動態生成 -->
+                        </select>
+                    </div>
+                    <div style="margin: 20px;">
+                        <label class="form-label" style="width: 90px;color: #a67c52;">上下架狀態:</label>
+                        <select class="form-control"
+                                style="display: inline-block;width: 750px;border-color: #f1ecd1;"
+                                id="room_sale_status" name="room_sale_status" required>
+                            <option value="0">下架</option>
+                            <option value="1">上架</option>
+                        </select>
+                    </div>
+                    <div style="margin: 20px;">
+                        <label class="form-label" style="width: 90px;color: #a67c52;">房間狀態:</label>
+                        <select class="form-control"
+                                style="display: inline-block;width: 750px;border-color: #f1ecd1;"
+                                id="room_status" name="room_status" required>
+                            <option value="0">空房</option>
+                            <option value="1">已入住</option>
+                            <option value="2">待整理</option>
+                        </select>
+                    </div>
+                    <div class="mb-3" style="text-align: left;margin: 20px;">
+                        <button class="btn btn-primary"
+                                type="submit"
+                                style="background: #a67c52;border-style: none;text-align: left;margin-left: 90px;color: #f1ecd1;">
+                            送出
+                        </button>
+                        <button class="btn btn-primary"
+                                style="background: #a67c52; border-style: none; text-align: left; margin-left: 0.5rem; color: #f1ecd1;"
+                                onclick="closeButtonClicked()">關閉
+                        </button>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+        <footer class="bg-white sticky-footer">
+            <div class="container my-auto">
+                <div class="text-center my-auto copyright"><span>Copyright © Brand 2023</span></div>
+            </div>
+        </footer>
+    </div>
+    <a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+</div>
+<script src="/hotel/assets17/bootstrap/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="../assets/js/hotel_owner_login.js"></script>
+
+<script>
+    $(document).ready(function() {
+        const ownerName = getHotelOwnerName();
+        if (ownerName) {
+            $('#owner-name').text(ownerName);
+        }
+    });
+</script>
+
+<script>
+    //按關閉會導回前一頁
+    function closeButtonClicked() {
+        window.location.href = 'room.html';
+    }
+</script>
+<script>
+    // 動態生成房型select
+    var roomTypeMapping;
+    $(document).ready(function () {
+        var hotelId = getHotelOwnerId();
+
+        $.ajax({
+            url: `/roomTypes/hotelId/${hotelId}`,
+            type: 'GET',
+            success: function (data) {
+                roomTypeMapping = {};  // mapping對象
+
+                // 映射房型名稱與房型id
+                data.forEach(function (roomType) {
+                    roomTypeMapping[roomType.roomTypeName] = roomType.roomTypeId;
+                });
+
+                // 更新房型的下拉選單
+                updateRoomTypeSelectOptions();
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log(textStatus, errorThrown);
+            }
+        });
+
+        // 監聽使用者選擇何種房型 找到相應的id
+        $('#roomTypeSelect').on('change', function () {
+            var selectedRoomTypeName = $(this).val();
+            var selectedRoomTypeId = roomTypeMapping[selectedRoomTypeName];
+
+            console.log(selectedRoomTypeId);
+        });
+    });
+
+    // 更新下拉選單的房型
+    function updateRoomTypeSelectOptions() {
+        var select = $('#roomTypeSelect');
+        select.empty();
+
+        // 將房型名稱與id的映射關係加入下拉選單
+        Object.keys(roomTypeMapping).forEach(function (roomTypeName) {
+            select.append($('<option></option>').val(roomTypeName).text(roomTypeName));
+        });
+    }
+
+
+    // 新增房間
+    $(document).ready(function () {
+        const hotelId = getHotelOwnerId();
+        $("#roomForm").submit(function (e) {
+            e.preventDefault();
+            var selectedRoomTypeName = $('#roomTypeSelect').val();
+            var selectedRoomTypeId = Number(roomTypeMapping[selectedRoomTypeName]); // 通過房型名稱拿到房型id
+
+            // newRoom
+            var newRoom = {
+                roomName: $("input[name='room_name']").val(),
+                roomSaleStatus: $("select[name='room_sale_status']").val(),
+                roomStatus: $("select[name='room_status']").val(),
+                roomTypeId: selectedRoomTypeId // 把選擇的房型ID加到newRoom中
+            };
+
+            // 送出新增房間的請求
+            $.ajax({
+                url: '/rooms/addRoom?roomTypeId=' + selectedRoomTypeId,
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(newRoom),
+                success: function (response) {
+                    $("#roomForm")[0].reset(); // 清空表單
+                    $.ajax({
+                        // 更新房型表格內的房間數量
+                        url: `/roomTypes/updateRooms/${selectedRoomTypeId}`,
+                        type: 'POST',
+                        success: function (response) {
+                            Swal.fire({
+                                title: '房間數量已更新',
+                                showClass: {
+                                    popup: 'animate__animated animate__fadeInDown'
+                                },
+                                hideClass: {
+                                    popup: 'animate__animated animate__fadeOutUp'
+                                },
+                                confirmButtonColor: '#f8c544',
+                            }).then(() => {
+                                window.location.href = "room.html"; // 回到上一頁
+                            });
+                            // setTimeout(function() {
+                            //     window.location.href = "/f_hotel_17/room.html"; // 回到上一頁
+                            // }, 1500); // 延遲執行
+                        },
+                        error: function (jqXHR, textStatus, errorThrown) {
+                            toastr.error('更新房間數量失敗');
+                        }
+                    });
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.error(textStatus, errorThrown);
+                }
+            });
+        });
+    });
+
+
+</script>
+</body>
+
+</html>

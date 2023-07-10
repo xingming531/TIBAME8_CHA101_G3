@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<title>旅館業主資料審核</title>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
+<link rel="stylesheet" href="css/Font%20Awesome%205%20Brands.css">
+<link rel="stylesheet" href="css/Font%20Awesome%205%20Free.css">
+<link rel="stylesheet" href="fonts/fontawesome-all.min.css">
+<link rel="stylesheet" href="css/Articles-Badges-images.css">
+<link rel="stylesheet"
+	href="css/card-3-column-animation-shadows-images.css">
+<link rel="stylesheet" href="css/Navbar-Centered-Links-icons.css">
+<link rel="stylesheet" href="css/styles.min.css">
+
+<!-- font-awesome -->
+<script src="https://kit.fontawesome.com/2a44feb0d3.js"
+	crossorigin="anonymous"></script>
+<link rel="stylesheet" href="./css/all.css">
+<link rel="shortcut icon" href="/assets/img/fav_icon.png" type="image/x-icon">
+<style>
+* {
+	box-sizing: border-box;
+}
+
+div.row {
+	/* border: 1px solid black; */
+	box-shadow: 0 0 5px #574f36;
+	background-color: #f1ecd1;
+	border-radius: 50px;
+	margin: 10px;
+	padding: 20px 20px;
+}
+
+div.search {
+	/* border: 1px solid blue; */
+	display: inline-block;
+	width: 40%;
+}
+
+div.search2 {
+	display: inline-block;
+	/* border: 1px solid red; */
+	width: 50%;
+	text-align: right;
+}
+
+#clickableText {
+	cursor: pointer;
+	color: blue;
+}
+
+.data-container tr>td {
+	width: 15%;
+}
+
+.reload {
+	display: inline-block;
+	width: auto;
+}
+
+.reload_btn {
+	background: #ffe7dd;
+}
+
+.hotel_owner_text {
+	display: inline-block;
+	width: auto;
+}
+</style>
+</head>
+
+<body id="page-top">
+	<div id="wrapper">
+		<nav
+			class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0"
+			style="background: #f1ecd1;">
+			<div class="container-fluid d-flex flex-column p-0">
+				<a
+					class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0"
+					href="/f_27/admin-table.html">
+					<div class="sidebar-brand-text mx-3">
+						<img width="59" height="33" src="/assets/img/logo-only.png">
+					</div>
+				</a>
+				<hr class="sidebar-divider my-0">
+				<ul class="navbar-nav">
+					<li class="nav-item dropdown show"><a
+						class="dropdown-toggle nav-link" aria-expanded="true"
+						data-bs-toggle="dropdown" data-bs-auto-close="false" href="#"
+						style="color: #a67c52; padding: 5px 16px; font-weight: bold; font-size: 14px;">網站管理</a>
+						<div class="dropdown-menu show" data-bs-popper="none"
+							style="background: rgba(255, 255, 255, 0); border-style: none; padding: 0px; margin: 0px; margin-bottom: 5px;">
+							<a class="dropdown-item" href="/news_product/NewsAlter.html"
+								style="padding: 2px 30px; font-size: 13px; color: #574f36;">新增最新消息</a><a
+								class="dropdown-item" href="/news_product/News.html"
+								style="padding: 2px 30px; font-size: 13px; color: #574f36;">最新消息列表</a><a
+								class="dropdown-item" href="/lostPet/lost_record_back.html"
+								style="padding: 2px 30px; font-size: 13px; color: #574f36;">協尋文章列表</a><a
+								class="dropdown-item" href="/admin/member_manage.html"
+								style="padding: 2px 30px; font-size: 13px; color: #574f36;">會員列表</a>
+							<div class="dropdown-divider"
+								style="border-color: rgb(255, 255, 255);"></div>
+						</div></li>
+					<li class="nav-item dropdown show"><a
+						class="dropdown-toggle nav-link" aria-expanded="true"
+						data-bs-toggle="dropdown" data-bs-auto-close="false" href="#"
+						style="color: #a67c52; padding: 5px 16px; font-weight: bold; font-size: 14px;">業主管理</a>
+						<div class="dropdown-menu show" data-bs-popper="none"
+							style="background: rgba(255, 255, 255, 0); border-style: none; padding: 0px; margin: 0px; margin-bottom: 5px; color: #574f36;">
+							<a class="dropdown-item" href="/owner/OwnerCheck.html"
+								style="padding: 2px 30px; font-size: 13px; color: #574f36;">旅館業主審核</a><a
+								class="dropdown-item" href="/owner/OwnerManage.html"
+								style="padding: 2px 30px; font-size: 13px; color: #574f36;">旅館業主列表</a><a
+								class="dropdown-item"
+								href="/animalCorporation/AnimalCorporationCheck.html"
+								style="padding: 2px 30px; font-size: 13px; color: #574f36;">收容業主審核</a><a
+								class="dropdown-item"
+								href="/animalCorporation/AnimalCorporationManage.html"
+								style="padding: 2px 30px; font-size: 13px; color: #574f36;">收容業主列表</a>
+							<div class="dropdown-divider"
+								style="border-color: rgb(255, 255, 255);"></div>
+						</div></li>
+					<li class="nav-item dropdown show"><a
+						class="dropdown-toggle nav-link" aria-expanded="true"
+						data-bs-toggle="dropdown" data-bs-auto-close="false" href="#"
+						style="color: #a67c52; padding: 5px 16px; font-weight: bold; font-size: 14px;">商城管理</a>
+						<div class="dropdown-menu show" data-bs-popper="none"
+							style="background: rgba(255, 255, 255, 0); border-style: none; padding: 0px; margin: 0px; margin-bottom: 5px; color: #574f36;">
+							<a class="dropdown-item" href="/news_product/ProductAlter.html"
+								style="padding: 2px 30px; font-size: 13px; color: #574f36;">新增商品</a><a
+								class="dropdown-item" href="/news_product/Product.html"
+								style="padding: 2px 30px; font-size: 13px; color: #574f36;">商品列表</a><a
+								class="dropdown-item"
+								href="/back-order-master/back-order-master.html"
+								style="padding: 2px 30px; font-size: 13px; color: #574f36;">訂單列表</a>
+							<div class="dropdown-divider"
+								style="border-color: rgb(255, 255, 255);"></div>
+						</div></li>
+					<li class="nav-item dropdown show"><a
+						class="dropdown-toggle nav-link" aria-expanded="true"
+						data-bs-toggle="dropdown" data-bs-auto-close="false" href="#"
+						style="color: #a67c52; padding: 5px 16px; font-weight: bold; font-size: 14px;">員工管理</a>
+						<div class="dropdown-menu show" data-bs-popper="none"
+							style="background: rgba(255, 255, 255, 0); border-style: none; padding: 0px; margin: 0px; margin-bottom: 5px; color: #574f36;">
+							<a class="dropdown-item" href="/f_27/admin-table.html"
+								style="padding: 2px 30px; font-size: 13px; color: #574f36;">員工列表</a>
+							<div class="dropdown-divider"
+								style="border-color: rgb(255, 255, 255);"></div>
+						</div></li>
+				</ul>
+				<div class="text-center d-none d-md-inline">
+					<button class="btn rounded-circle border-0" id="sidebarToggle-1"
+						type="button"></button>
+				</div>
+			</div>
+		</nav>
+		<div class="d-flex flex-column" id="content-wrapper">
+			<div id="content">
+				<nav
+					class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+					<div class="container-fluid">
+						<button class="btn btn-link d-md-none rounded-circle me-3"
+							id="sidebarToggleTop-1" type="button">
+							<i class="fas fa-bars"></i>
+						</button>
+						<ul class="navbar-nav flex-nowrap ms-auto">
+							<li class="nav-item dropdown no-arrow">
+								<div class="nav-item dropdown no-arrow">
+									<a class="dropdown-toggle nav-link" aria-expanded="false"
+										data-bs-toggle="dropdown" href="#"><span
+										class="d-none d-lg-inline me-2 text-gray-600 small"
+										id="admin-name">Valerie Luna</span></a>
+									<div
+										class="dropdown-menu shadow dropdown-menu-end animated--grow-in"
+										style="min-width: 110px;">
+										<a class="dropdown-item" id="logout-button"><i
+											class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Logout</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<div class="container-fluid">
+					<h3 class="text-dark mb-4">旅館業主審核</h3>
+					<div class="card shadow">
+						<div class="card-header py-3">
+							<div class="hotel_owner_text">
+								<p class="text-primary m-0 fw-bold">列表刷新</p>
+							</div>
+							<div class="reload">
+								<button class="reload_btn">
+									<i class="fa-solid fa-rotate"></i>
+								</button>
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="row">
+								<span>待審核資料</span>
+							</div>
+							<div class="table-responsive table mt-2" id="dataTable"
+								role="grid" aria-describedby="dataTable_info"
+								style="text-align: center;">
+								<table class="table my-0" id="dataTable">
+									<thead>
+										<tr>
+											<th>業主編號</th>
+											<th style="text-align: center;">旅館業主</th>
+											<th>旅館名稱</th>
+											<th>業主資料</th>
+											<th>旅館資料</th>
+											<th>旅館證明圖檔</th>
+											<th>審核狀態</th>
+											<th></th>
+										</tr>
+									</thead>
+
+									<tbody class="data-container">
+
+									</tbody>
+									<tfoot>
+										<tr></tr>
+									</tfoot>
+								</table>
+								<div id="loading">
+									<img src="../owner/img/loading.gif">
+								</div>
+							</div>
+							<div class="row">
+
+								<div class="col-md-6">
+									<nav
+										class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
+										<ul class="pagination">
+
+										</ul>
+									</nav>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer class="bg-white sticky-footer">
+				<div class="container my-auto">
+					<div class="text-center my-auto copyright">
+						<span>Copyright © Brand 2023</span>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<a class="border rounded d-inline scroll-to-top" href="#page-top"><i
+			class="fas fa-angle-up"></i></a>
+	</div>
+</body>
+
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="./js/bs-init.js"></script>
+<script src="./js/theme-1-1.js"></script>
+<script src="./js/theme-1.js"></script>
+<script src="./js/theme.js"></script>
+<script src="../vendors/jquery/jquery-3.6.4.min.js"></script>
+<!-- sweatalert -->
+<script src="./sweetalert2/cdn"></script>
+<script src="./js/ownerCheck.js"></script>
+<script src="/assets/js/admin_login.js"></script>
+<script src="/assets/js/admin_nav.js"></script>
+
+</html>

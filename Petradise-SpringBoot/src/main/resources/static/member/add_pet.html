@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/nav.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="shortcut icon" href="/assets/img/fav_icon.png" type="image/x-icon">
+  <title>Petradise - 新增寵物</title>
+</head>
+
+<body>
+
+<div class="content">
+  <div class="container mt-5">
+    <h2 class="mb-4">新增寵物</h2>
+    <form class="bg-light shadow p-5 rounded" id="form" novalidate>
+      <div class="form-group">
+        <label for="name">寵物名字:</label><br>
+        <input type="text" id="name" name="name" class="form-control"><br>
+      </div>
+      <div class="form-group">
+        <label for="type">寵物種類:</label><br>
+        <select id="type" name="type" class="form-control">
+        </select><br>
+      </div>
+      <div class="form-group">
+        <label for="size">寵物大小:</label><br>
+        <select id="size" name="size" class="form-control">
+        </select><br>
+      </div>
+      <div class="form-group">
+        <label for="petPics">寵物照片:</label><br>
+        <input type="file" id="petPics" name="petPics" accept="image/*" multiple class="form-control"><br>
+        <div id="imagePreview"></div>
+      </div>
+      <button type="submit" value="Submit" class="btn btn-primary w-100 mt-3" id="submit">新增寵物</button>
+    </form>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+
+<!-- Add nav bar -->
+<script src="../assets/js/login.js"></script>
+<script src="./js/nav.js"></script>
+<script src="./js/add_pet.js"></script>
+</body>
+
+</html>

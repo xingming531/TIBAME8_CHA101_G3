@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+
+div.main_area {
+  background-color: white;
+  padding: 0;
+  border-radius: 8px;
+}
+
+div.wrap {
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  margin-top: 30px;
+  padding: 18px 15px;
+}
+
+label.search {
+  display: inline-block;
+  margin: 8px 0 2px 2px;
+}
+
+input.key {
+  width: 33%;
+  margin: 0px 0px 10px 12px;
+}
+
+td {
+  vertical-align: middle;
+}
+
+td.edit_sale_work,
+td.delete_sale_work {
+  text-align: center;
+}
+
+button.add_sale,
+button.edit_sale,
+button.delete_sale {
+  border: rgba(0, 0, 0, 0);
+}
+
+div.add_button_area {
+  text-align: right;
+}
+
+img.add_img {
+  max-width: 35px;
+}
+
+article.add_sale_project {
+  text-align: left;
+}
+
+table#modal_table * {
+  text-align: left;
+}

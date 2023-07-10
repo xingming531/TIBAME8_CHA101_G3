@@ -1,0 +1,51 @@
+div.source {
+  border: 1px solid #000000;
+  margin-bottom: 364px;
+  margin-right: 15px;
+  margin-left: 12px;
+  margin-top: 23px;
+  padding-bottom: 672px;
+  padding-top: 0px;
+}
+
+div.but {
+  display: flex;
+  margin-bottom: 31px;
+  padding-bottom: 0px;
+  padding-top: 2px;
+  margin-top: 6px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-right: 5px;
+  margin-left: 901px;
+}
+
+.btn-modify {
+  background-color: #f1ecd1;
+  color: #574f36;
+  border: 1px solid #574f36;
+}
+
+.btn-modify:hover {
+  background-color: #A67C52;
+}
+
+.btn-modify:active {
+  background-color: #A67C52;
+}
+
+.btn-modify:focus {
+  background-color: #A67C52;
+}
+
+.page-link {
+  background-color: #ffffff;
+  color: #A67C52;
+  border: 1px solid#A67C52;
+}
+
+.page-item.active {
+  background-color: #A67C52;
+  color: #ffffff;
+}
+

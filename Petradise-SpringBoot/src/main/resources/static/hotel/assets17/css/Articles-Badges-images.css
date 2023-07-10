@@ -1,0 +1,42 @@
+.fit-cover {
+  object-fit: cover;
+}
+
+.form-label {
+  margin: 10px;
+  padding: 20px;
+  padding-right: 6px;
+}
+
+select.location {
+  width: 10px;
+  height: 500px;
+}
+
+div.pet {
+  width: 300px;
+  height: 200px;
+}
+
+.btn {
+  background-color: #574f36;
+
+}
+
+.btn-delete {
+  color: black;
+}
+
+.btn-search {
+  background-color: #A67C52;
+  margin-left: 23px;
+}
+
+div.search.style {
+  background-color: rgba(166, 124, 82, 0.3);
+  border-radius: 15px;
+  padding-right: 28px;
+  margin-right: 62px;
+  padding-left: 61px;
+  margin-left: 66px;
+}

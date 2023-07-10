@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.111.3">
+    <title>Petradise - Sign in</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .btn-lg {
+            background-color: orange;
+            border-width: 0;
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="css/signin.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
+
+<main class="form-signin w-100 m-auto">
+    <form>
+        <img class="mb-4" src="../assets/logo-only.png" alt="" width="149.5" height="82.5">
+        <h1 class="h3 mb-3 fw-normal">管理員登入</h1>
+
+        <div class="form-floating">
+            <input type="text" class="form-control" id="account" placeholder="name@example.com">
+            <label for="account">帳號</label>
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control" id="password" placeholder="Password">
+            <label for="password">密碼</label>
+        </div>
+
+        <div class="alert alert-danger text-start d-none" role="alert">
+        </div>
+
+        <button class="w-100 btn btn-lg btn-primary" id="btn_signin">登入</button>
+    </form>
+</main>
+<script src="../assets/js/admin_login.js"></script>
+<script src="../vendors/jquery/jquery-3.6.4.min.js"></script>
+<script src="./js/signin.js"></script>
+</body>
+
+</html>
