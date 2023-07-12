@@ -1,5 +1,8 @@
 # TIBAME8_CHA101_G3
-TIBAME寵物旅館專題
+TIBAME團體協作專案
+
+專案內容:第三方寵物平台,內容包含寵物商城、寵物旅館以及寵物收容,	提供一站式的寵物相關服務
+
 專案負責項目:
 
 寵物旅館業主&收容業主註冊 - 即時追蹤使用者輸入的資料是否與格式相符並顯示訊息在前端畫面上,達到良好的使用者體驗,需要驗證信箱確認是存在的郵件地址,註冊成功會寄發通知信。
@@ -19,3 +22,13 @@ TIBAME寵物旅館專題
 
 
 聊天室登入、即時聊天 - 業主進行聊天室登入後即可導向至聊天室,而用戶在搜尋旅館的畫面上可以點擊即時聊天連接至聊天室,與業主進行線上溝通。
+專案名稱:Petradise孩樂在其中
+
+使用技術:
+
+後端 - Java、Servlet、Springboot、WebSocket、Hibernate
+
+前端 - HTML5、CSS3、JavaScript、jQuery、AJAX、Sweetalert2、Bootstrap
+
+資料庫 - MySQL、Redis、AWS
+
